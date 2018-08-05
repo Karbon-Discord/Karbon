@@ -22,15 +22,6 @@ bot.on("guildMemberAdd", member => {
   let guild = member.guild;
   guild.defaultChannel.sendMessage(`Welcome ${member.user} to this server.`).catch(console.error);
 });
-
-bot.user.setPresence({ status: 'online', game: { name: '--help' } });
-
-
-bot.on("guildMemberAdd", member => {
-  let guild = member.guild;
-  guild.defaultChannel.sendMessage(`Welcome ${member.user} to this server.`).catch(console.error);
-});
-
 bot.on("message", (message) => {
     let prefix = config.prefix;
     let messageArray = message.content.split(" ");
