@@ -18,10 +18,6 @@ fs.readdir('./commands', (err, files) => {
 
 })
 
-bot.on("ready", () => {
-    bot.sendMessage("Karbon initialized and is ready!");
-})
-
 bot.on("message", (message) => {
     let prefix = config.prefix;
     let messageArray = message.content.split(" ");
