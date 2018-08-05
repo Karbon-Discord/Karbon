@@ -18,14 +18,6 @@ fs.readdir('./commands', (err, files) => {
 
 })
 
-bot.on('guildMemberAdd', member => {
-    member.guild.channels.get('channelID').send(`${member.user.username} has joined the server! :smile:`); 
-});
-
-bot.on('guildMemberRemove', member => {
-    member.guild.channels.get('channelID').send(`Nooo... ${member.user.username}, has left the server :slight_frown:`);
-});
-
 bot.on("message", (message) => {
     let prefix = config.prefix;
     let messageArray = message.content.split(" ");
