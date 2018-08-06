@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
-const wins = require('wins.json');
-const losses = require('losses.json');
-const xp = require('xp.json');
+const wins = require('../wins.json');
+const losses = require('../losses.json');
+const xp = require('../xp.json');
 
 module.exports.run = async (bot, message, args) => {
     let user = message.mentions.users.first();
