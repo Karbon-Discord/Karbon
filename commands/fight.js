@@ -20,6 +20,9 @@ module.exports.run = async (bot, message, args) => {
                     message.channel.send(`Alright, so ${user} is scared. But oh well, challenge declined!`);
                 }
             })
+        .catch(() => {
+            message.channel.send("No response, cancelling fight.")
+        })
     })
     else return message.reply("Please specify a user.")
 };
