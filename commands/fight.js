@@ -9,8 +9,8 @@ module.exports.run = async (bot, message, args) => {
     else return message.reply("Please specify a user.")
     
     var res = ["yes", "no"];
-    message.channel.awaitMessages(response => return (response.content == 'yes' && message.author.id == user)
-|| (response.content == 'no' && message.author.id == user), 
+    message.channel.awaitMessages(response => response.content == 'yes' && message.author.id == user
+|| response.content == 'no' && message.author.id == user, 
   {
     max: 1,
     time: 60000,
