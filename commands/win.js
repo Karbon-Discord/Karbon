@@ -2,11 +2,11 @@ const Discord = require('discord.js');
 const wins = require('../wins.json');
 
 module.exports.run = async (bot, message, args) => {
-  var win = wins[message.author.id].wins;
-  message.reply(`You have ${win} wins.`)
+  var win12 = wins[message.author.id].wins;
+  message.channel.send(`You have ${win12} wins.`)
 
 };
 
 module.exports.help = {
-  name: "wins"
+  name: "win"
 }
