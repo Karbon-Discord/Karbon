@@ -9,7 +9,7 @@ module.exports.run = async (bot, message, args) => {
     else return message.reply("Please specify a user.")
     
     var res = ["yes", "no"];
-    if(user.reply == "yes") console.log("oof");
+    if(user.response == "yes") console.log("oof");
           
 };
 
