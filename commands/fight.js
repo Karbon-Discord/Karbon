@@ -39,6 +39,7 @@ module.exports.run = async (bot, message, args) => {
     message.channel.send()
     wins[message.author.id].wins = wins[message.author.id].wins += 1
    
+}
 
 module.exports.help = {
   name: "fight"
