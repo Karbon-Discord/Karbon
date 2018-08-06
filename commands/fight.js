@@ -13,10 +13,10 @@ module.exports.run = async (bot, message, args) => {
             errors: ['time'],
         })
            .then((collected) => {
-                if (collected.first().content == 'yes') {
+                if (response.content == 'yes') {
                     message.channel.send(`:crossed_swords: ${user} has accepted the challenge!`);
                 }
-                else if(collected.first().content == 'no') {
+                else if(response.content == 'no') {
                     message.channel.send(`Alright, so ${user} is scared. But oh well, challenge declined!`);
                 }
             })
