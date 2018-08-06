@@ -13,7 +13,7 @@ module.exports.run = async (bot, message, args) => {
   .setAuthor(message.author.username)
   .setColor("#000000")
   .addField("Wins", curxp, true);
-  message.channel.send(lvlEmbed).then(msg => {msg.delete(5000)});
+  message.channel.send(lvlEmbed);
 
 }
 
