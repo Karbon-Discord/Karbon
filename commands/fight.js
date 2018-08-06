@@ -19,9 +19,9 @@ module.exports.run = async (bot, message, args) => {
     
     let user = message.mentions.users.first();
     if(!user) message.reply("Please specify a user.")
-    var winnerHealth = Math.floor(Math.random * 99) + 1
+    var winnerHealth = Math.floor(Math.random * 99) +1
     var loserHealth = 0;
-    var arr = [`${message.author.id}`, `${user}`];
+    var arr = [`${message.author.username}`, `${user}`];
     var randomwinner = Math.floor(Math.random() * arr.length);
         var winner = new Discord.RichEmbed()
         .setColor("#000000")
