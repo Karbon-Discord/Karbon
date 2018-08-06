@@ -9,7 +9,7 @@ module.exports.run = async (bot, message, args) => {
             wins:0
         }
     }
-    
+
     if(!losses[message.author.id]){
         losses[message.author.id] = {
             losses:0
@@ -37,6 +37,7 @@ module.exports.run = async (bot, message, args) => {
         .addField(`${randomwinner} has won the battle!`)
         .addField(`${winnerHealth} - 0`)
     message.channel.send()
+    wins[message.author.id].wins = wins[message.author.id].wins += 1
    
 
 module.exports.help = {
