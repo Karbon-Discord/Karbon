@@ -9,7 +9,25 @@ module.exports.run = async (bot, message, args) => {
     else return message.reply("Please specify a user.")
     
     var res = ["yes", "no"];
-    if(user.response == "yes") console.log("oof");
+    message.channel.awaitMessages(response => return (response.content == 'yes' && message.author.id == user)
+|| (response.content == 'no' && message.author.id == user), 
+  {
+    max: 1,
+    time: 60000,
+    errors: ['time'],
+})
+
+ .then((collected) => {
+                if (collected.first().content == 'yes') {
+                    message.channel.send(`${user} has accepted the challenge!`);
+                }
+                else if(collected.first().content == 'no') {
+                    message.channel.send(`Nope, challenge rejected.`);
+                }
+            })
+            .catch(() => {
+                message.channel.send(`No response. Fight has been cancelled.`);
+            });
           
 };
 
