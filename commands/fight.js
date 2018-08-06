@@ -35,7 +35,7 @@ module.exports.run = async (bot, message, args) => {
         .setTitle(":crossed_swords: BATTLE [BETA]")
         .addField(`${randomwinner} has won the battle!`)
         .addField(`${winnerHealth} - 0`)
-    message.channel.send()
+    message.channel.send(winner)
     wins[message.author.id].wins = wins[message.author.id].wins += 1
    
 }
