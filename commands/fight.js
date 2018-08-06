@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const wins = require('../wins.json');
 const xp = require('../xp.json');
-
+const fs = require('fs');
 module.exports.run = async (bot, message, args) => {
     if(!wins[message.author.id]){
         wins[message.author.id] = {
@@ -30,7 +30,13 @@ module.exports.run = async (bot, message, args) => {
         .addField(`${winnerHealth} - 0`)
     message.channel.send(winner)
     wins[message.author.id].wins = wins[message.author.id].wins += 1
-    xp[message.author.id].xp = xp[message.author.id].xp += 1
+    fs.writeFile("../wins.json", JSON.stringify(wins), err => {
+        if(err) console.log(err)
+    })
+    xp[message.author.id].xp = xp[message.author.id].xp += 1;
+        fs.writeFile("../xp.json", JSON.stringify(xp), err => {
+        if(err) console.log(err)
+    })
 }
 
 module.exports.help = {
