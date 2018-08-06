@@ -25,8 +25,7 @@ module.exports.run = async (bot, message, args) => {
     
     
     let user = message.mentions.users.first();
-    if(user) return message.channel.send(`${user}, ${message.author.username} has challenged you to fight. Would you like to accept the challenge?`)
-    else return message.reply("Please specify a user.")
+    if(!user) message.reply("Please specify a user.")
     var winnerHealth = Math.floor(Math.random * 99) + 1
     var loserHealth = 0;
     var arr = [`${message.author.id}`, `${user}`];
