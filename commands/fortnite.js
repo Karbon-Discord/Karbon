@@ -4,7 +4,7 @@ const fortnite = new client(process.env.fortnite);
 
 module.exports.run = async (bot, message, args) => {
       var username = args[0];
-      var platform = args[1];
+      var platform = args[1] || "pc";
       if(!username) return message.reply("Please enter a username.")
       
       let data = fortnite.user(username, platform)
@@ -21,7 +21,7 @@ module.exports.run = async (bot, message, args) => {
 
           let embed = new Discord.RichEmbed()
           .setTitle("**FORTNITE LIFETIME STATS**")
-          .setAuthor(message.author.username)
+          .setAuthor(args[0])
           .setColor("#000000")
           .addField("Wins", wins, true)
           .addField("Matches Played", mp, true)
