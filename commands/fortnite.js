@@ -10,6 +10,10 @@ module.exports.run = async (bot, message, args) => {
       let data = fortnite.user(username, platform)
       .then(data => {
           console.log(data);
+          let stats = data.stats;
+          let lifetime = stats.lifetime;
+          let score = lifetime[6]["Score"];
+          console.log(score)
       })
  };
 
