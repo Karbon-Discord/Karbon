@@ -19,8 +19,8 @@ fs.readdir('./commands', (err, files) => {
 })
 
 bot.on('guildMemberAdd', member => {
-    let guild = member.guild;
-    guild.channels.get('general').send(`${member.user.username}, welcome!`)
+    let guild = bot.channels.find('name', 'general');
+    guild.send(`${member.user.username}, welcome!`)
 });
 
 bot.on('guildMemberRemove', member => {
