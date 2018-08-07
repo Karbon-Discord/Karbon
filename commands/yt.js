@@ -10,7 +10,6 @@ module.exports.run = async (bot, message, args) => {
     let nm = args.join(' ');
     search(nm, opts, function(err, results) {
       if(err) return console.log(err);
-      console.dir(results);
       message.channel.send(':movie_camera: ***' + results[0].title + '*** - ' + results[0].channelTitle + '\n' + results[0].link).catch(console.error);
     });
 }
