@@ -10,6 +10,7 @@ module.exports.run = async (bot, message, args) => {
    .addField("--fortnite [username] [pc | psn | xbl ]", "My favorite food truck :fork_and_knife:", true)
    .addField("--win", "Shows the number of wins you got from fighting :trophy:", true)
    .addField("--frick", "ow", true)
+   message.channel.send(help);
 };
 
 module.exports.help = {
