@@ -28,7 +28,8 @@ module.exports.run = async (bot, message, args) => {
           .addField("Score", score, true)
           .addField("Win Percentage", winper, true)
           .addField("Kills", kills, true)
-          .addField("KD", kd, true)
+          .addField("KD", kd, true);
+           message.channel.send(embed);
           console.log(score)
       }).catch(err => {
       if(err) {console.log(err)}
