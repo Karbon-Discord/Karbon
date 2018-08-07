@@ -4,7 +4,7 @@ const fortnite = new client(process.env.fortnite);
 
 module.exports.run = async (bot, message, args) => {
       var username = args[0];
-      var platform = args[1] || "pc";
+      var platform = args[1];
       if(!username) return message.reply("Please enter a username.")
       
       let data = fortnite.user(username, platform)
