@@ -1,5 +1,3 @@
 {
-    "prefix": "--",
-    "token": "Put Discord token here",
-    "ytkey": "Put YouTube API v3 key here"
+    "prefix": "--"
 }
