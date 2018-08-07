@@ -38,7 +38,7 @@ module.exports.run = async (bot, message, args) => {
     xp[message.author.id].xp = xp[message.author.id].xp += 1;
         fs.writeFile("../xp.json", JSON.stringify(xp), err => {
         if(err) console.log(err)
-    )}
+        })
 }
 
 module.exports.help = {
