@@ -20,7 +20,7 @@ module.exports.run = async (bot, message, args) => {
           let kd = lifetime[11]["K/d"];
 
           let embed = new Discord.RichEmbed()
-          .setTitle("**FORTNITE LIFETIME STATS")
+          .setTitle("**FORTNITE LIFETIME STATS**")
           .setAuthor(message.author.username)
           .setColor("#000000")
           .addField("Wins", wins, true)
