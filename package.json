@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "discord.js": "^11.3.2",
-    "fortnite": "^4.1.1"
+    "fortnite": "^4.1.1",
+    "youtube-search": "^1.1.1"
   }
 }
