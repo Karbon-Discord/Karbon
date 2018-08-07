@@ -14,6 +14,8 @@ module.exports.run = async (bot, message, args) => {
           let lifetime = stats.lifetime;
           let score = lifetime[6]["Score"];
           console.log(score)
+      }).catch(e => {
+      if(e) console.log(e)
       })
  };
 
