@@ -13,3 +13,8 @@ module.exports.run = async (bot, message, args) => {
       message.channel.send(':movie_camera: ***' + results[0].title + '*** - ' + results[0].channelTitle + '\n' + results[0].link).catch(console.error);
     });
 }
+
+
+module.exports.help = {
+    "name": "yt"
+}
