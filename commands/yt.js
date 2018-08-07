@@ -7,7 +7,7 @@ module.exports.run = async (bot, message, args) => {
       maxResults: 1,
       key: process.env.ytkey
     };
-    let nm = message.toString().replace(process.env.prefix + 'yt ','')
+    let nm = args.join(' ');
     search(nm, opts, function(err, results) {
       if(err) return console.log(err);
       console.dir(results);
