@@ -1,7 +1,7 @@
-var exports = module.exports = {};
 var Card = require('./Card.js');
+const Discord = require('discord.js')
 
-
+module.exports.run = async (bot, message, args) => {
 var cards;
 /**
  * Deck constructor
@@ -36,5 +36,5 @@ Deck.prototype.shuffle = function() {
 
 	return this;
 };
-
-module.exports = Deck;
+}
+module.exports.help = {name:"Deck"};
