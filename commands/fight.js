@@ -17,7 +17,7 @@ module.exports.run = async (bot, message, args) => {
     }
     
     
-    let user = args[0];
+    let user = message.members.mentions.first();
 //    let lol = args[1] 
     if(!user) message.reply("Please specify a user.")
     else{
