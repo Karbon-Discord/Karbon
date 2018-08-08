@@ -1,6 +1,8 @@
 var Deck = require('./Deck.js');
 var Hand = require('./Hand.js');
+const Discord = require('discord.js');
 
+module.exports.run = async (bot, message, args) => {
 function BlackJack(bet, callback) {
   this.bet = bet;
   
@@ -73,4 +75,5 @@ BlackJack.prototype.play = function(hit, callback) {
   }
 }
 
-module.exports = BlackJack;
+}
+module.exports.help = {name: "blackjack"};
