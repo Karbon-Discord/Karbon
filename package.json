@@ -12,6 +12,6 @@
     "discord.js": "^11.3.2",
     "fortnite": "^4.1.1",
     "youtube-search": "^1.1.1",
-    "ffmpeg": "^0.0.4"
+    "neocities": "^0.0.3"
   }
 }
