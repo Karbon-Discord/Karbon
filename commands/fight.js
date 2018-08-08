@@ -23,7 +23,7 @@ module.exports.run = async (bot, message, args) => {
     else{
     var winnerHealth = Math.floor(Math.random() * 99) + 1
     var loserHealth = 0;
-   var arr = [`${message.author.username}`, `${user}`];
+   var arr = [`${message.author.username}`, `${user.username}`];
    var randomwinner = Math.floor(Math.random() * arr.length);
         var winner = new Discord.RichEmbed()
         .setColor("#000000")
