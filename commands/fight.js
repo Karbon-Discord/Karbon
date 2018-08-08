@@ -18,11 +18,11 @@ module.exports.run = async (bot, message, args) => {
     
     
     let user = args[0];
-    let lol = args[1] 
+//    let lol = args[1] 
     if(!user) message.reply("Please specify a user.")
     var winnerHealth = Math.floor(Math.random() * 99) + 1
     var loserHealth = 0;
-   var arr = [`${lol}`, `${user}`];
+   var arr = [`${message.author.username}`, `${user}`];
    var randomwinner = Math.floor(Math.random() * arr.length);
         var winner = new Discord.RichEmbed()
         .setColor("#000000")
@@ -30,7 +30,7 @@ module.exports.run = async (bot, message, args) => {
         .addField(`${arr[randomwinner]} has won the battle!`)
         .addField(`${winnerHealth} - 0`)
     message.channel.send(winner)
-/*    wins[message.author.id].wins = wins[message.author.id].wins += 1
+    wins[message.author.id].wins = wins[message.author.id].wins += 1
     fs.writeFile("../wins.json", JSON.stringify(wins), err => {
      if(err) console.log(err)
   })
@@ -39,7 +39,7 @@ module.exports.run = async (bot, message, args) => {
         fs.writeFile("../xp.json", JSON.stringify(xp), err => {
         if(err) console.log(err)
 
-     }) */
+     }) 
 }
 
 module.exports.help = {
