@@ -1,8 +1,10 @@
 var Card = require('./Card.js');
-
+const Discord = require('discord.js')
 /**
  * Hand constructor
  */
+
+module.exports.run = async (bot, message, args) => {
 function Hand() {
   this.cards = new Array();
 };
@@ -74,5 +76,5 @@ Hand.prototype.toString = function() {
 Hand.prototype.bust = function() {
 	return this.score() > this.limit;
 };
-
-module.exports = Hand;
+}
+module.exports.help = {name: "Hand"};
