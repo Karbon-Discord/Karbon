@@ -9,7 +9,7 @@ module.exports.run = async (bot, message, args) => {
         if(!error && response.statusCode === 200){
           const $ = cheerio.load(html);
           const comment = $('.news-item');
-          const output = comment.find('.comment').text()
+          const output = comment.find('.content').text()
           console.log(output);
         }
     })
