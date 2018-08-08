@@ -8,8 +8,9 @@ module.exports.run = async (bot, message, args) => {
     request(`https://neocities.org/site/${user}`, (error, response, html) => {
         if(!error && response.statusCode === 200){
           const $ = cheerio.load(html);
-          const comment = $('.news-item comment');
-          console.log(comment);
+          const comment = $('.news-item');
+          const output = comment.find('.comment')
+          console.log(output);
         }
     })
     
