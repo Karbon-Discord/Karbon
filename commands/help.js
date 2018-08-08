@@ -11,6 +11,7 @@ module.exports.run = async (bot, message, args) => {
    .addField("--win", "Shows the number of wins you got from fighting :trophy:", true)
    .addField("--frick", "ow", true)
    .addField("--yt", "Search for a video on YouTube", true)
+   .addField("--lottery", "This is in beta", true)
    message.channel.send(help);
 };
 
