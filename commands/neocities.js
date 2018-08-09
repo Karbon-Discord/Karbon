@@ -9,7 +9,7 @@ module.exports.run = async (bot, message, args) => {
         if(!error && response.statusCode === 200){
           const $ = cheerio.load(html);
           const comment = $('.news-item');
-          const output = comment.find('.content').first().text().replace(/\s\s+/g, "\n");
+          var output = comment.find('.content').first().text().replace(/\s\s+/g, "\n");
           //message.channel.send(output);
           if(!output){
             output = "Looks like he/she doesn't have anything to say at the moment!"
