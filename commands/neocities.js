@@ -14,9 +14,10 @@ module.exports.run = async (bot, message, args) => {
           if(!output){
             message.channel.send("Looks like you don't have anything to say at the moment!")
           }
-        var views = $('.stat strong').first().text();
+        var views = $('.stat').first().text();
         var followers = $('.stat').first().next().text();
-        console.log(views, followers);
+        var updates = $('.stat').first().next().next().text();
+        console.log(updates);
         }
 
     })
