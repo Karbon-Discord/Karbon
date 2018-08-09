@@ -13,8 +13,6 @@ module.exports.run = async (bot, message, args) => {
       const comment = $('.news-item') 
       const output = comment.find('.content').text().replace(/\s\s+/g, '');
       console.log(output)
-      // Write Row To CSV
-    });
             
         }
     })
