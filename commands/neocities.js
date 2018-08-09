@@ -12,22 +12,35 @@ module.exports.run = async (bot, message, args) => {
           const output = comment.find('.content').first().text().replace(/\s\s+/g, "\n");
           //message.channel.send(output);
           if(!output){
-            message.channel.send("Looks like you don't have anything to say at the moment!")
+            output = "Looks like he/she doesn't have anything to say at the moment!"
           }
         var views = $('.stat').first().text();
         var followers = $('.stat').first().next().text();
         var updates = $('.stat').first().next().next().text();
         var tips = $('.stat').first().next().next().next().text();
-        var lastUpdated = ('.col-33 .stat').text()
-        console.log(lastUpdated);
-        }
+        var lastUpdated = $('.stat').first().next().next().next().next().text();
+        var create = $('.stat').first().next().next().next().next().next().text();
+            
+        
 
     })
     
    oof.info(user, resp => {
     var hits = resp.info.hits;
-   // var createdDate = 
    })
+        
+        let embed = new Discord.RichEmbed()
+        .setTitle(`Neocities stats for ${user}`)
+        .setAuthor(`${output}`)
+        .setColor("#42f4d7")
+        .addField(":eyes: Views", views, true)
+        .addField(":dolphin: Followers", followers, true)
+        .addField(":construction: Updates", updates, true)
+        .addField(":money: Tips", tips, true)
+        .addField(":tools: Last Updated", lastUpdated, true)
+        .addField(":new_moon_with_face: Created", create, true)
+        .addField(":ballot_box_with_check: Hits", hits, true)
+        }
     
     
 };
