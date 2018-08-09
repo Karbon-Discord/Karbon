@@ -18,7 +18,7 @@ module.exports.run = async (bot, message, args) => {
 
     })
     
-   Neocities.info(user, resp => {
+   oof.info(user, resp => {
     console.log(resp);
    })
     
