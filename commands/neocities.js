@@ -11,6 +11,9 @@ module.exports.run = async (bot, message, args) => {
           const comment = $('.news-item');
           const output = comment.find('.content').first().text().replace(/\s\s+/g, "\n");
           message.channel.send(output);
+          if(!output){
+            message.channel.send("Looks like you don't have anything to say at the moment!")
+          }
         }
 
     })
