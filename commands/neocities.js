@@ -10,7 +10,7 @@ module.exports.run = async (bot, message, args) => {
           const $ = cheerio.load(html);
           $('.news-item comment').each((i, el) => {
               const comment = $(el)
-              .find('div');
+              .find('div.comment');
               
               console.log(comment);
           })
