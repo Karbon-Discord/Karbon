@@ -10,6 +10,7 @@ module.exports.run = async (bot, message, args) => {
           const $ = cheerio.load(html);
           const comment = $('.news-item');
           const output = comment.find('.content').text();
+          console.log(output);
         }
 
     })
