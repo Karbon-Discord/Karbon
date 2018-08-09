@@ -11,6 +11,7 @@ module.exports.run = async (bot, message, args) => {
           const arrcmt = [];
           $('.stat strong').each(function( index ) {
         arrcmt.push($(this).text().trim());
+              console.log(arrcmt)
       });
             
         }
