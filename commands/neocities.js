@@ -13,6 +13,8 @@ module.exports.run = async (bot, message, args) => {
           const output = comment.find('.content').text();
           $('.content').each((i, el) => {
                       array.push(output);
+              
+              message.channel.send(array);
 
           })
             
