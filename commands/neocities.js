@@ -9,9 +9,10 @@ module.exports.run = async (bot, message, args) => {
         if(!error && response.statusCode === 200){
           const $ = cheerio.load(html);
           const arrcmt = [];
-          const stats = $('.stat strong');
+          $('.stat strong').foreach(function(){;
           arrcmt.push($(stats).text().trim());
             console.log(arrcmt)
+})
             
         }
     })
