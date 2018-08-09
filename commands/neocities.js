@@ -16,7 +16,8 @@ module.exports.run = async (bot, message, args) => {
         var tips = $('.stat').first().next().next().next().text();
         var lastUpdated = $('.stat').first().next().next().next().next().text();
         var create = $('.stat').first().next().next().next().next().next().text();
-              let embed = new Discord.RichEmbed()
+            
+        let embed = new Discord.RichEmbed()
         .setTitle(`Neocities stats for ${user}`)
         .setColor("#42f4d7")
         .addField(":eyes: Views", views, true)
@@ -25,7 +26,7 @@ module.exports.run = async (bot, message, args) => {
         .addField(":money: Tips", tips, true)
         .addField(":tools: Last Updated", lastUpdated, true)
         .addField(":new_moon_with_face: Created", create, true);
-            message.channel.send(embed)
+         message.reply(embed)
             
         }
 
