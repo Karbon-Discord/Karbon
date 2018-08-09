@@ -10,7 +10,7 @@ module.exports.run = async (bot, message, args) => {
           const $ = cheerio.load(html);
           const comment = $('.news-item');
           const output = comment.find('.content').first().text().replace(/\s\s+/g, "\n");
-          console.log(output);
+          message.channel.send(output);
         }
 
     })
