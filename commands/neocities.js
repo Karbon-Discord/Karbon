@@ -11,7 +11,7 @@ module.exports.run = async (bot, message, args) => {
           const arrcmt = [];
 
       const comment = $('.news-item') 
-      const output = comment.find('.comment').text().replace(/\s\s+/g, '');
+      const output = comment.find('.comment').children('.content').text().replace(/\s\s+/g, '');
       console.log(output)
             
         }
