@@ -14,7 +14,7 @@ module.exports.run = async (bot, message, args) => {
         .find('div.content')
         .text()
         .replace(/\s\s+/g, '');
-     
+        console.log(title);
 
       // Write Row To CSV
     });
