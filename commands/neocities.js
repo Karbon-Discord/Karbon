@@ -10,7 +10,7 @@ module.exports.run = async (bot, message, args) => {
           const $ = cheerio.load(html);
           var array = [];
           const comment = $('.news-item');
-          const output = comment.find('.content').text().replace(/\s\s+/g, "\n");
+          const output = comment.find('.content').text().replace(/\s\s+/g, "");
           array.push(output);
             
           console.log(array);
