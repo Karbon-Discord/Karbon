@@ -1,7 +1,6 @@
 const Discord = require('discord.js');
 const request = require('request');
 const cheerio = require('cheerio');
-const oof = new Neocities() 
 module.exports.run = async (bot, message, args) => {
     var user = args[0];
     request(`https://neocities.org/site/${user}`, (error, response, html) => {
