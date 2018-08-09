@@ -14,14 +14,14 @@ module.exports.run = async (bot, message, args) => {
           if(!output){
             message.channel.send("Looks like you don't have anything to say at the moment!")
           }
-        var lastUpdated = $('.stat strong').text();
-        console.log(lastUpdated);
+        var views = $('.stat strong').first().text();
+        var followers = $('.stat strong').first().next().text();
+        console.log(views, followers);
         }
 
     })
     
    oof.info(user, resp => {
-    var views = resp.info.views;
     var hits = resp.info.hits;
    // var createdDate = 
    })
