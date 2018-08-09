@@ -15,7 +15,7 @@ module.exports.run = async (bot, message, args) => {
         var updates = $('.stat').first().next().next().text();
         var tips = $('.stat').first().next().next().next().text();
 //        var lastUpdated = $('.stat').first().next().next().next().next().text();
-        var create = $('.stats').first().next().text();
+        var create = $('.stats').text();
           console.log(create)
 //         let embed = new Discord.RichEmbed()
 //         .setTitle(`Neocities stats for ${user}`)
