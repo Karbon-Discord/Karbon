@@ -12,6 +12,8 @@ module.exports.run = async (bot, message, args) => {
           const comment = $('.news-item');
           arrcmt.push($(comment).text().trim());
             console.log(arrcmt)
+            
+        }
     })
     
     
