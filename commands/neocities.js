@@ -18,7 +18,7 @@ module.exports.run = async (bot, message, args) => {
         var followers = $('.stat').first().next().text();
         var updates = $('.stat').first().next().next().text();
         var tips = $('.stat').first().next().next().next().text();
-        var lastUpdated = ('.col-33').text()
+        var lastUpdated = ('.col-33 .stat').text()
         console.log(lastUpdated);
         }
 
