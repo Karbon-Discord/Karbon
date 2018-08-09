@@ -21,18 +21,18 @@ module.exports.run = async (bot, message, args) => {
         var tips = $('.stat').first().next().next().next().text();
         var lastUpdated = $('.stat').first().next().next().next().next().text();
         var create = $('.stat').first().next().next().next().next().next().text();
-            
-              let embed = new Discord.RichEmbed()
-        .setTitle(`Neocities stats for ${user}`)
-        .setAuthor(`${output}`)
-        .setColor("#42f4d7")
-        .addField(":eyes: Views", views, true)
-        .addField(":dolphin: Followers", followers, true)
-        .addField(":construction: Updates", updates, true)
-        .addField(":money: Tips", tips, true)
-        .addField(":tools: Last Updated", lastUpdated, true)
-        .addField(":new_moon_with_face: Created", create, true);
-            message.channel.send(embed)
+            console.log(output)
+//               let embed = new Discord.RichEmbed()
+//         .setTitle(`Neocities stats for ${user}`)
+//         .setAuthor(`${output}`)
+//         .setColor("#42f4d7")
+//         .addField(":eyes: Views", views, true)
+//         .addField(":dolphin: Followers", followers, true)
+//         .addField(":construction: Updates", updates, true)
+//         .addField(":money: Tips", tips, true)
+//         .addField(":tools: Last Updated", lastUpdated, true)
+//         .addField(":new_moon_with_face: Created", create, true);
+//             message.channel.send(embed)
             
         }
 
