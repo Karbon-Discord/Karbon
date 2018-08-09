@@ -18,7 +18,6 @@ module.exports.run = async (bot, message, args) => {
 
       // Write Row To CSV
     });
-      });
             
         }
     })
