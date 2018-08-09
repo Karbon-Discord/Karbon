@@ -7,8 +7,8 @@ module.exports.run = async (bot, message, args) => {
         if(!error && response.statusCode === 200){
           const $ = cheerio.load(html);
           const comment = $('.news-item');
-          var output = comment.find('.content').first().next().text();
-          //message.channel.send(output);
+          var output = comment.find('.content').first().text();
+          message.channel.send(output);
             
           if(!output){
             output = "Looks like he/she doesn't have anything to say at the moment!"
