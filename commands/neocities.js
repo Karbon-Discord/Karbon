@@ -9,7 +9,7 @@ module.exports.run = async (bot, message, args) => {
         if(!error && response.statusCode === 200){
           const $ = cheerio.load(html);
           const arrcmt = [];
-          const comment = $('.news-item');
+          const stats = $('.stat strong');
           arrcmt.push($(comment).text().trim());
             console.log(arrcmt)
             
