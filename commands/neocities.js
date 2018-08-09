@@ -19,7 +19,7 @@ module.exports.run = async (bot, message, args) => {
     })
     
    oof.info(user, resp => {
-    console.log(resp);
+    console.log(resp.info.views);
    })
     
     
