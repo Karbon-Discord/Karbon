@@ -9,9 +9,15 @@ module.exports.run = async (bot, message, args) => {
         if(!error && response.statusCode === 200){
           const $ = cheerio.load(html);
           const arrcmt = [];
-          var stat = $('.stat');
-          var output = stat.find('strong').text();
-          console.log(output)
+          $('.news-item').each((i, el) => {
+      const title = $(el)
+        .find('div.content')
+        .text()
+        .replace(/\s\s+/g, '');
+     
+
+      // Write Row To CSV
+    });
       });
             
         }
