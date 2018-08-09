@@ -21,7 +21,7 @@ module.exports.run = async (bot, message, args) => {
         var lastUpdated = $('.stat').first().next().next().next().next().text();
         var create = $('.stat').first().next().next().next().next().next().text();
             
-        
+        }
 
     })
     
