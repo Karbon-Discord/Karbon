@@ -10,7 +10,7 @@ module.exports.run = async (bot, message, args) => {
           const $ = cheerio.load(html);
           const arrcmt = [];
           $('.stat strong').each(function( index ) {
-        arrcmt.push($(this).text().trim());
+        arrcmt.push($(this).text());
               console.log(arrcmt)
       });
             
