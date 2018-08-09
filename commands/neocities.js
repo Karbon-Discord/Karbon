@@ -11,6 +11,7 @@ module.exports.run = async (bot, message, args) => {
           const arrcmt = [];
           var stat = $('.stat');
           var output = stat.find('strong').text();
+          console.log(output)
       });
             
         }
