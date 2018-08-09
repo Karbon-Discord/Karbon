@@ -9,13 +9,10 @@ module.exports.run = async (bot, message, args) => {
         if(!error && response.statusCode === 200){
           const $ = cheerio.load(html);
           const arrcmt = [];
-          $('.news-item').each((i, el) => {
-      const title = $(el)
-        .find('div.content')
-        .text()
-        .replace(/\s\s+/g, '');
-        console.log(title);
 
+      const comment = $('.news-item') 
+      const output = comment.find('.content').text().replace(/\s\s+/g, '');
+      console.log(output)
       // Write Row To CSV
     });
             
