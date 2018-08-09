@@ -40,7 +40,6 @@ module.exports.run = async (bot, message, args) => {
         .addField(":tools: Last Updated", lastUpdated, true)
         .addField(":new_moon_with_face: Created", create, true)
         .addField(":ballot_box_with_check: Hits", hits, true)
-        }
     
     
 };
