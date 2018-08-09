@@ -9,7 +9,7 @@ module.exports.run = async (bot, message, args) => {
         if(!error && response.statusCode === 200){
           const $ = cheerio.load(html);
           const comment = $('.news-item');
-          const output = comment.find('.content:first-child').first().text().replace(/\s\s+/g, "\n");
+          const output = comment.find('.content').first().text().replace(/\s\s+/g, "\n");
           console.log(output);
         }
 
