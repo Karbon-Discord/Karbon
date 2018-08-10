@@ -12,7 +12,7 @@ module.exports.run = async (bot, message, args) => {
 
           $('.stat strong').each(function( index ) {
               arr.push($(this).text().trim());
-              var user = arr[0];
+              var views = arr[0];
               var follow = arr[1]
               var update = arr[2]
               var tip = arr[3]
