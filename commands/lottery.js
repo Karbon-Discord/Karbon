@@ -5,11 +5,9 @@ module.exports.run = async (bot, message, args) => {
   
   var id = Math.floor(Math.random() * 4000000) + 1000000
   if(!ticket[message.author.id]){
-   ticket[message.author.id] = {
-     ticketid: id
-  };
+  message.reply("Please run the command: --generate.")
 }
- message.reply(`**Your Lottery ID is: ${id}`);
+ message.channel.send(ticket);
   
 
 }
