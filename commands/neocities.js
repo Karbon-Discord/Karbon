@@ -25,7 +25,7 @@ module.exports.run = async (bot, message, args) => {
         .addField(":eyes: Views", user, true)
         .addField(":dolphin: Followers", follow, true)
         .addField(":construction: Updates", update, true)
-        .addField(":money: Tips", tip, true)
+        .addField(":money_with_wings:  Tips", tip, true)
         .addField(":tools: Last Updated", lastupdate, true)
         .addField(":new_moon_with_face: Created", create, true);
          message.channel.send(embed)
