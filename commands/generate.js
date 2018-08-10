@@ -13,13 +13,15 @@ if(!ticket[message.author.id]){
    fs.writeFile('../lotteryticket.json', JSON.stringify(id), err => {
          if(err) console.log(err);
    })
+   
+    message.reply(`**Your Lottery ID is: ${id}. **`);
+
 }
    else{
     message.reply("You have already generated a ticket!");
     
     
   }
- message.reply(`**Your Lottery ID is: ${id}. **`);
 
 }
 
