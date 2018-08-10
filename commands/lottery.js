@@ -9,7 +9,7 @@ module.exports.run = async (bot, message, args) => {
      ticketid: id
   };
 }
- console.log(id);
+ message.reply(`**Your Lottery ID is: ${id}`);
   
 
 }
