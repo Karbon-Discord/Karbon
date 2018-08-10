@@ -8,7 +8,8 @@ if(!ticket[message.author.id]){
 
 }
    else{
-    message.reply(`Your ticket is: ${ticket[message.author.id].ticket}.`);
+     var ticket = ticket[message.author.id].ticketl
+    message.reply(`Your ticket is: ${ticket}.`);
     
     
   }
