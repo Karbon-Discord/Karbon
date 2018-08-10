@@ -10,13 +10,14 @@ module.exports.run = async (bot, message, args) => {
 
             
           var stat = $('.stats').text()
+          console.log(stat)
         var views = $('.stat').first().text();
         var followers = $('.stat').first().next().text();
         var updates = $('.stat').first().next().next().text();
         var tips = $('.stat').first().next().next().next().text();
 //         var lastUpdated = $('.stat').first().next().next().next().next().text();
 //         var create = $('.stats').first().next().find('.stat').first().next().text();
-          console.log(create)
+ //         console.log(create)
 //         let embed = new Discord.RichEmbed()
 //         .setTitle(`Neocities stats for ${user}`)
 //         .setColor("#42f4d7")
