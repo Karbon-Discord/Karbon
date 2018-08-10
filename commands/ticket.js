@@ -8,7 +8,7 @@ if(!ticket[message.author.id]){
 
 }
    else{
-     var ticket = ticket[message.author.id].ticket;
+     var ticket = ticket[message.author.id].ticketid;
     message.reply(`Your ticket is: ${ticket}.`);
     
     
