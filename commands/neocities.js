@@ -8,24 +8,24 @@ module.exports.run = async (bot, message, args) => {
           const $ = cheerio.load(html);
           const comment = $('.news-item');
 
-            
+                          var arr = [];
+
           $('.stat strong').each(function( index ) {
-              var arr = [];
               arr.push($(this).text().trim());
               console.log(arr);
       });
 
- //         console.log(create)
-//         let embed = new Discord.RichEmbed()
-//         .setTitle(`Neocities stats for ${user}`)
-//         .setColor("#42f4d7")
-//         .addField(":eyes: Views", views, true)
-//         .addField(":dolphin: Followers", followers, true)
-//         .addField(":construction: Updates", updates, true)
-//         .addField(":money: Tips", tips, true)
-//         .addField(":tools: Last Updated", lastUpdated, true)
-//         .addField(":new_moon_with_face: Created", create, true);
-//          message.reply(embed)
+         console.log(create)
+        let embed = new Discord.RichEmbed()
+        .setTitle(`Neocities stats for ${user}`)
+        .setColor("#42f4d7")
+        .addField(":eyes: Views", arr[0], true)
+        .addField(":dolphin: Followers", arr[1], true)
+        .addField(":construction: Updates", arr[2], true)
+        .addField(":money: Tips", arr[3], true)
+        .addField(":tools: Last Updated", arr[4], true)
+        .addField(":new_moon_with_face: Created", arr[5], true);
+         message.reply(embed)
             
         }
 
