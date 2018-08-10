@@ -18,9 +18,8 @@ module.exports.run = async (bot, message, args) => {
               var tip = arr[3]
               var lastupdate = arr[4]
               var create = arr[5]
-      });
-
-        let embed = new Discord.RichEmbed()
+              
+              let embed = new Discord.RichEmbed()
         .setTitle(`Neocities stats for ${user}`)
         .setColor("#42f4d7")
         .addField(":eyes: Views", user, true)
@@ -31,6 +30,9 @@ module.exports.run = async (bot, message, args) => {
         .addField(":new_moon_with_face: Created", create, true);
          message.channel.send(embed)
             
+      });
+
+        
         }
 
     })
