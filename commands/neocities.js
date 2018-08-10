@@ -16,7 +16,7 @@ module.exports.run = async (bot, message, args) => {
         var updates = $('.stat').first().next().next().text();
         var tips = $('.stat').first().next().next().next().text();
         var lastdate = $('.stat').first().next().next().next().next().text();
-        var createww = $('.stat').first().next().next().next().next().next().text();
+        var create = $('.stat').first().next().next().next().next().next().text();
             console.log(create)
  //         console.log(create)
 //         let embed = new Discord.RichEmbed()
