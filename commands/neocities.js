@@ -9,15 +9,12 @@ module.exports.run = async (bot, message, args) => {
           const comment = $('.news-item');
 
             
-          var stat = $('.stats').text()
-          console.log(stat)
-        var views = $('.stat').first().text();
-        var followers = $('.stat').first().next().text();
-        var updates = $('.stat').first().next().next().text();
-        var tips = $('.stat').first().next().next().next().text();
-        var lastdate = $('.stat').first().next().next().next().next().text();
-        var create = $('.stat').first().next().next().next().next().next().text();
-            console.log(create)
+          $('.stat strong').each(function( index ) {
+              var arr = [];
+              arr.push($(this).text().trim());
+              console.log(arr);
+      });
+
  //         console.log(create)
 //         let embed = new Discord.RichEmbed()
 //         .setTitle(`Neocities stats for ${user}`)
