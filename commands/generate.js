@@ -9,7 +9,7 @@ if(!ticket[message.author.id]){
      ticketid: id
   };
 }
- message.reply(`**Your Lottery ID is: ${id}. Please remember to not run this command.`);
+ message.reply(`**Your Lottery ID is: ${id}. Please remember to not run this command again. **`);
 
 }
 
