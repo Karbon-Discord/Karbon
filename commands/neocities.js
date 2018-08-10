@@ -24,7 +24,7 @@ module.exports.run = async (bot, message, args) => {
  let embed = new Discord.RichEmbed()
         .setTitle(`Neocities stats for ${user}`)
         .setColor("#42f4d7")
-        .addField(":eyes: Views", user, true)
+        .addField(":eyes: Views", views, true)
         .addField(":dolphin: Followers", follow, true)
         .addField(":construction: Updates", update, true)
         .addField(":money_with_wings:  Tips", tip, true)
