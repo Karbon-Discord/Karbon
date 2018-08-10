@@ -29,7 +29,7 @@ module.exports.run = async (bot, message, args) => {
         .addField(":money: Tips", tip, true)
         .addField(":tools: Last Updated", lastupdate, true)
         .addField(":new_moon_with_face: Created", create, true);
-         message.reply(embed)
+         message.channel.send(embed)
             
         }
 
