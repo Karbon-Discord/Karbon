@@ -7,6 +7,8 @@ module.exports.run = async (bot, message, args) => {
   if(!ticket[message.author.id]){
   message.reply("Please run the command: --generate.")
 }
+  
+  
  message.channel.send(ticket);
   
 
