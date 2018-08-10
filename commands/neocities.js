@@ -15,7 +15,6 @@ module.exports.run = async (bot, message, args) => {
               console.log(arr);
       });
 
-         console.log(create)
         let embed = new Discord.RichEmbed()
         .setTitle(`Neocities stats for ${user}`)
         .setColor("#42f4d7")
