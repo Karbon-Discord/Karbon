@@ -7,9 +7,10 @@ module.exports.run = async (bot, message, args) => {
 // }
 //   else{
     var arr = [];
+    var user = message.author.username
     arr.push(ticket);
-    message.channel.send(`Okay, so these are the tickets that got generated: ${ticket.ticketid}`)
-    console.log(arr);
+    message.channel.send(`Okay, so these are the tickets that got generated: ${ticket.user.ticketid}`)
+    console.log(ticket.user.ticketid);
 //  }
   
 // message.channel.send(ticket);
