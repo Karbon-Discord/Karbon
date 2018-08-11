@@ -6,8 +6,9 @@ module.exports.run = async (bot, message, args) => {
    message.reply("Please run the command: --generate.")
  }
    else{
-      var oof = ticket.ticketid;
-      console.log(oof);
+    //  var oof = ticket.ticketid;
+    //  console.log(oof);
+      console.log(ticket);
  }
   
 // message.channel.send(ticket);
