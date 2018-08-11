@@ -6,9 +6,10 @@ module.exports.run = async (bot, message, args) => {
 //   message.reply("Please run the command: --generate.")
 // }
 //   else{
-    
+    var arr = [];
+    arr.push(ticket.trim());
     message.channel.send(`Okay, so these are the tickets that got generated: ${ticket.ticketid}`)
-    console.log(ticket);
+    console.log(arr);
 //  }
   
 // message.channel.send(ticket);
