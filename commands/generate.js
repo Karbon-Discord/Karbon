@@ -3,10 +3,12 @@ let ticket = require("../lotteryticket.json");
 const fs = require('fs');
 module.exports.run = async (bot, message, args) => {
 
-if(!ticket){
+if(!ticket[message.author.username]){
    var id = Math.floor(Math.random() * 4000000) + 1000000
 
-   ticket[message.author.username] = id;
+   ticket[message.author.username] = {
+      ticketid: id
+   } 
    
    fs.writeFile('../lotteryticket.json', JSON.stringify(id), err => {
          if(err) console.log(err);
