@@ -8,7 +8,7 @@ module.exports.run = async (bot, message, args) => {
    else{
       var oof = ticket[message.author.username].ticketid;
       console.log(oof);
-//  }
+ }
   
 // message.channel.send(ticket);
   
