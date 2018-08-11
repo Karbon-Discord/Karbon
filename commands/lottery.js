@@ -7,7 +7,7 @@ module.exports.run = async (bot, message, args) => {
 // }
 //   else{
     var arr = [];
-    arr.push(ticket.trim());
+    arr.push(ticket);
     message.channel.send(`Okay, so these are the tickets that got generated: ${ticket.ticketid}`)
     console.log(arr);
 //  }
