@@ -7,7 +7,9 @@ if(!ticket.ticketid){
    var id = Math.floor(Math.random() * 4000000) + 1000000
 
    ticket = {
-      ticketid: id
+      ticketid: {
+         id: id
+      }
    } 
    
    fs.writeFile('../lotteryticket.json', JSON.stringify(id), err => {
