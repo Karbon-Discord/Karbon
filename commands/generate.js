@@ -7,9 +7,7 @@ if(!ticket[message.author.id]){
    var id = Math.floor(Math.random() * 4000000) + 1000000
 
    ticket[message.author.id] = {
-      ticketid: {
-         ticket:id
-      }
+      ticketid: id
    } 
    
    fs.writeFile('../lotteryticket.json', JSON.stringify(id), err => {
