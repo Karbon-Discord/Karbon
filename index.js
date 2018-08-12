@@ -21,13 +21,16 @@ bot.on('ready', () => {
     bot.user.setActivity(`in ${bot.guilds.size} servers`)
 })
 bot.on('guildMemberAdd', member => {
-    member.guild.channels.get(`name`, `general`).send(`Welcome aboard, ${member.user}`);
-    
+    member.guild.channels.get(`id`, `478309556330430464`).send(`**Welcome aboard, ${member.user}! Please welcome him/her! If you have any questions, feel free to DM one of the Developers or me!** `);
+    let embed = new Discord.RichEmbed()
+    .setColor("#42f47d")
+    .addField(`**${member.user.username} has joined the server.`)
+    .addField(`${member.user.displayAvatarURL} User Joined`)
 });
 
-// bot.on('guildMemberRemove', member => {
-//     bot.defaultChannel.send(`Nooo... ${member.user.username}, has abandoned ship. :slight_frown:`);
-// });
+bot.on('guildMemberRemove', member => {
+    bot.defaultChannel.send(`${member.user.username} has abandoned ship. :slight_frown:`);
+});
 
 bot.on("message", (message) => {
     let prefix = config.prefix;
