@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 let ticket = require("../lotteryticket.json");
 
 module.exports.run = async (bot, message, args) => {
-   if(!ticket.ticketid){
+   if(!ticket[message.author.id].ticketid){
    message.reply("Please run the command: --generate.")
  }
    else{
