@@ -19,7 +19,7 @@ fs.readdir('./commands', (err, files) => {
 })
 
 bot.on('guildMemberAdd', member => {
-    console.log(guild.channels);
+    console.log(member.guild.channels);
 });
 
 bot.on('guildMemberRemove', member => {
