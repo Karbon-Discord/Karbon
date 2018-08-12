@@ -20,7 +20,7 @@ fs.readdir('./commands', (err, files) => {
 
 bot.on('guildMemberAdd', member => {
     let guild = bot.channels.get('name', 'general');
-    guild.send(`${member.user}, welcome!`)
+    guild.send(`${member.user.username}, welcome aboard!`)
  
 });
 
