@@ -21,7 +21,7 @@ bot.on('ready', () => {
     bot.user.setActivity(`in ${bot.guilds.size} servers`)
 })
 bot.on('guildMemberAdd', member => {
-    member.guild.channels.get('general').send(`Welcome aboard, ${member.user}`);
+    member.guild.channels.get(`general`).send(`Welcome aboard, ${member.user}`);
     
 });
 
