@@ -26,7 +26,7 @@ bot.on('guildMemberAdd', member => {
     .setColor("#42f47d")
     .addField(`**${member.user.username} has joined the server.`)
     .addField(`${member.user.displayAvatarURL} User Joined`);
-    member.guild.channels.find("478309556330430464").sendMessage(embed);
+    member.guild.channels.find("478309556330430464").send(embed);
 });
 
 // bot.on('guildMemberRemove', member => {
