@@ -25,7 +25,7 @@ bot.on('guildMemberAdd', member => {
     let embed = new Discord.RichEmbed()
     .setColor("#42f47d")
     .addField(`**${member.user.username} has joined the server.`)
-    .addField(`${member.user.displayAvatarURL} User Joined`);
+    .setThumbnail(`${member.user.displayAvatarURL} User Joined`);
     bot.channels.find("id", "478309556330430464").sendMessage(embed);
 });
 
