@@ -30,9 +30,9 @@ bot.on('guildMemberAdd', member => {
 
 });
 
-bot.on('guildMemberRemove', member => {
-    bot.defaultChannel.send(`${member.user.username} has abandoned ship. :slight_frown:`);
-});
+// bot.on('guildMemberRemove', member => {
+//   //  bot.defaultChannel.send(`${member.user.username} has abandoned ship. :slight_frown:`);
+// });
 
 bot.on("message", (message) => {
     let prefix = config.prefix;
