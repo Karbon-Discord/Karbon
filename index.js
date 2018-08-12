@@ -23,7 +23,7 @@ bot.on('ready', () => {
 bot.on('guildMemberAdd', member => {
     bot.channels.find("id", "478309556330430464").sendMessage(`**Welcome aboard, ${member.user}! Please welcome him/her! If you have any questions, feel free to DM one of the Developers or me!** `);
     let embed = new Discord.RichEmbed()
-      .addField(`:inbox_tray: **${member.user.username}** has joined the server!`, "")
+      .addField(`:inbox_tray: **${member.user.username}** has joined the server!`, `Welcome to the party!`)
       .setFooter("User Joined | Karbon's Lounge", member.user.displayAvatarURL)
        
      .setColor("#42f47d")
