@@ -22,9 +22,9 @@ bot.on('guildMemberAdd', member => {
     console.log(member.guild.channels);
 });
 
-bot.on('guildMemberRemove', member => {
-    bot.defaultChannel.send(`Nooo... ${member.user.username}, has abandoned ship. :slight_frown:`);
-});
+// bot.on('guildMemberRemove', member => {
+//     bot.defaultChannel.send(`Nooo... ${member.user.username}, has abandoned ship. :slight_frown:`);
+// });
 
 bot.on("message", (message) => {
     let prefix = config.prefix;
