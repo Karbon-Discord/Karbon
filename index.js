@@ -21,11 +21,10 @@ fs.readdir('./commands', (err, files) => {
 bot.on('guildMemberAdd', member => {
     let guild = bot.channels.get('name', 'general');
     guild.send(`${member.user.username}, welcome aboard!`)
- 
 });
 
 bot.on('guildMemberRemove', member => {
-    member.guild.channels.get('channelID').send(`Nooo... ${member.user.username}, has left the server :slight_frown:`);
+    member.guild.channels.get('channelID').send(`Nooo... ${member.user.username}, has abandoned ship. :slight_frown:`);
 });
 
 bot.on("message", (message) => {
