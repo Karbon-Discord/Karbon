@@ -21,12 +21,12 @@ bot.on('ready', () => {
     bot.user.setActivity(`in ${bot.guilds.size} servers`)
 })
 bot.on('guildMemberAdd', member => {
-    member.guild.channels.find(`478309556330430464`).sendMessage(`**Welcome aboard, ${member.user}! Please welcome him/her! If you have any questions, feel free to DM one of the Developers or me!** `);
+    member.guild.channels.find("478309556330430464").send(`**Welcome aboard, ${member.user}! Please welcome him/her! If you have any questions, feel free to DM one of the Developers or me!** `);
     let embed = new Discord.RichEmbed()
     .setColor("#42f47d")
     .addField(`**${member.user.username} has joined the server.`)
     .addField(`${member.user.displayAvatarURL} User Joined`);
-    member.guild.channels.find(`478309556330430464`).sendMessage(embed);
+    member.guild.channels.find("478309556330430464").sendMessage(embed);
 });
 
 // bot.on('guildMemberRemove', member => {
