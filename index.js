@@ -17,7 +17,9 @@ fs.readdir('./commands', (err, files) => {
     })
 
 })
-
+bot.on('ready', () => {
+    bot.user.setGame(`${bot.guilds.size}`)
+})
 bot.on('guildMemberAdd', member => {
     console.log(member.guild.channels);
 });
