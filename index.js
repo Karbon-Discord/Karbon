@@ -21,7 +21,7 @@ bot.on('ready', () => {
     bot.user.setActivity(`in ${bot.guilds.size} servers`)
 })
 bot.on('guildMemberAdd', member => {
-    bot.channels.find("id", "478309556330430464").sendMessage(`**Welcome aboard, ${member.user}! Please welcome him/her! If you have any questions, feel free to DM one of the Developers or me!** `);
+    bot.channels.find("id", "478309556330430464").send(`**Welcome aboard, ${member.user}! Please welcome him/her! If you have any questions, feel free to DM one of the Developers or me!** `);
     let embed = new Discord.RichEmbed()
       .setDescription(`:inbox_tray: **${member.user.tag}** has joined the server!`)
       .setFooter("User Joined | Karbon's Lounge", member.user.displayAvatarURL)
@@ -29,12 +29,19 @@ bot.on('guildMemberAdd', member => {
      .setColor("#42f47d")
   
     .setThumbnail(`${member.guild.iconURL}`);
-    bot.channels.find("id", "478309556330430464").sendMessage(embed);
+    bot.channels.find("id", "478309556330430464").send(embed);
 });
 
-// bot.on('guildMemberRemove', member => {
-//   //  bot.defaultChannel.send(`${member.user.username} has abandoned ship. :slight_frown:`);
-// });
+bot.on('guildMemberRemove', member => {
+    let embed = new Discord.RichEmbed()
+      .setDescription(`:inbox_tray: **${member.user.tag}** has left the ship.`)
+      .setFooter("User Left | Karbon's Lounge", member.user.displayAvatarURL)
+       
+     .setColor("#f44262")
+  
+    .setThumbnail(`${member.guild.iconURL}`);
+    bot.channels.find("id", "478309556330430464").send(embed);
+});
 
 bot.on("message", (message) => {
     let prefix = config.prefix;
