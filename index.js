@@ -23,9 +23,11 @@ bot.on('ready', () => {
 bot.on('guildMemberAdd', member => {
     bot.channels.find("id", "478309556330430464").sendMessage(`**Welcome aboard, ${member.user}! Please welcome him/her! If you have any questions, feel free to DM one of the Developers or me!** `);
     let embed = new Discord.RichEmbed()
+      .setTitle(`**${member.user.username} has joined the server.**`)
+    .setDescription("User Joined!")
     .setColor("#42f47d")
-    .setTitle(`**${member.user.username} has joined the server.**`)
-    .setImage(`${member.user.displayAvatarURL}`);
+  
+    .setThumbnail(`${member.user.displayAvatarURL}`);
     bot.channels.find("id", "478309556330430464").sendMessage(embed);
 });
 
