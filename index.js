@@ -18,10 +18,11 @@ fs.readdir('./commands', (err, files) => {
 
 })
 bot.on('ready', () => {
-    bot.user.setGame(`${bot.guilds.size}`)
+    bot.user.setGame(`in ${bot.guilds.size} servers`)
 })
 bot.on('guildMemberAdd', member => {
     console.log(member.guild.channels);
+    console.log(`${member.user.username} has joined the server.`)
 });
 
 // bot.on('guildMemberRemove', member => {
