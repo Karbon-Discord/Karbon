@@ -12,7 +12,7 @@ module.exports.run = async (bot, message, args) => {
       .setDescription(`:x: **${kUser.user.tag}** has been kicked!`)
       .addField("Kicked By:",  `${message.author} (${message.author.id})`)
       .addField("Reason Provided:", kReason)
-     .setColor("#42f47d")
+     .setColor("#f44262")
   
     bot.channels.find("id", "478316814963703842").send(embed);
     message.guild.member(kUser).kick(kReason);
