@@ -9,7 +9,7 @@ module.exports.run = async (bot, message, args) => {
     if(kUser.hasPermission("BAN_MEMBERS")) return message.channel.send("**The user you requested to be kicked cannot be kicked!**");
 
    let embed = new Discord.RichEmbed()
-      .setDescription(`:x: **${kUser.user.tag}** has been **banned**!`)
+      .setDescription(`:no_entry: **${kUser.user.tag}** has been **banned**!`)
       .addField("Banned By:",  `${message.author} (${message.author.id})`)
       .addField("Reason Provided:", kReason)
      .setColor("#000000")
