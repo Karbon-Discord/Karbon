@@ -46,7 +46,7 @@ if(warns[wUser.id].warns === 3){
             ADD_REACTIONS: false
         })
     }) 
-  }catch(e){
+  } .catch(e){
       console.log(e.stack);
     }
     
