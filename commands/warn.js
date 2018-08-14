@@ -67,6 +67,17 @@ if(warns[wUser.id].warns === 3){
     message.guild.member(kUser).kick(kReason);
   }
   
+  if(warns[wUser.id].warns === 5){
+     let embed = new Discord.RichEmbed()
+      .setDescription(`:no_entry: **${kUser.user.tag}** has been **banned**!`)
+      .addField("Banned By:",  `${message.author} (${message.author.id})`)
+      .addField("Reason Provided:", kReason)
+     .setColor("#000000")
+  
+    bot.channels.find("id", "478316814963703842").send(embed);
+    message.guild.member(kUser).ban(kReason);
+  }
+  
   
 }
 
