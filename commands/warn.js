@@ -53,6 +53,21 @@ if(warns[wUser.id].warns === 3){
     })
 }
 }
+  
+  if(warns[wUser.id].warns === 4){
+   wUser.kick(reason) 
+    
+   let embed = new Discord.RichEmbed()
+      .setDescription(`:x: **${wUser.user.tag}** has been kicked!`)
+      .addField("Kicked By:",  `${message.author} (${message.author.id})`)
+      .addField("Reason Provided:", reason)
+     .setColor("#f44262")
+  
+    bot.channels.find("id", "478316814963703842").send(embed);
+    message.guild.member(kUser).kick(kReason);
+  }
+  
+  
 }
 
 
