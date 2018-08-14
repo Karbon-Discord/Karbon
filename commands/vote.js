@@ -31,5 +31,5 @@ const b = "🅱"
 
 
 module.exports.help = {
-  name: "warn"
+  name: "vote"
 }
