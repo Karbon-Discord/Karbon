@@ -9,7 +9,7 @@ if(!ticket.tickets){
       tickets: []
    } 
    
-      console.log(ticket);
+      console.log(ticket.tickets);
 
    var id = Math.floor(Math.random() * 4000000) + 1000000
    var oof = ticket.tickets;
