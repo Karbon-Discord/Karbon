@@ -8,7 +8,7 @@ const disagree = "❌"
 const a = "🅰"
 const b = "🅱"
   const type = args[0];
-  const question = args.join(" ");
+  const question = args[1].join(" ");
   //if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("no")
   if(!type || !question){
   message.react('🤔');
