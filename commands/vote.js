@@ -7,9 +7,9 @@ module.exports.run = async (bot, message, args) => {
 const disagree = "❌"
   const question = args.join(" ");
   //if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("no")
-  if(!type || !question){
+  if(!!question){
   message.react('🤔');
-    message.channel.send("**CORRECT USAGE: --vote [yes/no | option] [time (in ms)] [question] **");
+    message.channel.send("**CORRECT USAGE: --vote [question] **");
   }
   else{
   let msg = await message.guild.channels.find(`name`, 'vote').send(`<@everyone> **VOTING QUESTION: ${question}? **`)
