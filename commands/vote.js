@@ -13,19 +13,11 @@ const disagree = "❌"
   }
   else{
   let msg = await message.guild.channels.find(`name`, 'vote').send(`<@everyone> **VOTING QUESTION: ${question}? **`)
-    if(type === "option"){
-        await msg.react(a);
-        await msg.react(b);
-          const reactions = await msg.awaitReactions(reaction => reaction.emoji.name == a || reaction.emoji.name == b, {time: 2000});
-          message.channel.send(`Voting complete! We got ${reactions.get(a).count-1} as the first option, and ${reactions.get(b).count-1} as the second option!`);
-          
-
-    }
-       else if(type === "yes/no"){
-         await msg.react(agree);
-        await msg.react(disagree)
-    }
-    
+        await msg.react(agree);
+        await msg.react(disagree);
+          const reactions = await msg.awaitReactions(reaction => reaction.emoji.name == agree || reaction.emoji.name == disagree, {time: 2000});
+          message.channel.send(`Voting complete! We got ${reactions.get(agree).count-1} as the first option, and ${reactions.get(disagree).count-1} as the second option!`);
+     
   }
 
 }
