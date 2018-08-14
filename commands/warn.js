@@ -16,7 +16,7 @@ if(!warns[wUser.id]) warns[wUser.id] = {
 
 warns[wUser.id].warns++;
 
-fs.writeFile("./warnings.json", JSON.stringify(warns), err => {
+fs.writeFile("../warnings.json", JSON.stringify(warns), err => {
   if(err) console.log(err);
 })
 
