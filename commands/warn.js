@@ -46,11 +46,11 @@ if(warns[wUser.id].warns === 3){
         })
     }) 
     
-    let mutetime = "20m";
+    let mutetime = "10s";
     await(wUser.addRole(muterole.id));
     setTimeout(() => {
       wUser.removeRole(muterole.id);
-    })
+    }, ms(mutetime))
 }
 }
   
