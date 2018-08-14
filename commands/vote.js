@@ -18,7 +18,7 @@ const disagree = "❌"
         await msg.react(disagree)
     
     const reactions = await msg.awaitReactions(reaction => reaction.emoji.name === agree || reaction.emoji.name === disagree, {time: 1000});
-   message.guild.channels.find(`name`, 'vote').send(`**RESULTS ARE IN** ${agree}: ${reactions.get(agree).count() - 1} ${disagree}: ${reactions.get(disagree).count() - 1}`)
+   message.guild.channels.find(`name`, 'vote').send(`**RESULTS ARE IN** ${agree}: ${reactions.get(agree).count - 1} ${disagree}: ${reactions.get(disagree).count - 1}`)
         
   }
     
