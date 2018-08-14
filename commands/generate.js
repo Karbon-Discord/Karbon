@@ -9,11 +9,11 @@ if(!ticket.tickets){
       tickets: []
    } 
    
-   
+      console.log(ticket);
+
    var id = Math.floor(Math.random() * 4000000) + 1000000
    var oof = ticket.tickets;
    oof.append(`${id}`);
-   console.log(ticket);
    fs.writeFile('../lotteryticket.json', JSON.stringify(id), err => {
          if(err) console.log(err);
    })
