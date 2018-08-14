@@ -34,7 +34,6 @@ if(warns[wUser.id].warns === 3){
   let muterole = message.guild.roles.find(`name`, "Muted");
   wUser.addRole(muterole);
   if(!muterole){
-  try{
     muterole = message.guild.createRole({
       name: "Muted",
       color: "#41a3f4",
@@ -46,9 +45,6 @@ if(warns[wUser.id].warns === 3){
             ADD_REACTIONS: false
         })
     }) 
-  } .catch(e){
-      console.log(e.stack);
-    }
     
     let mutetime = "20m";
     await(wUser.addRole(muterole.id));
