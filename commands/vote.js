@@ -9,7 +9,7 @@ const a = "🅰"
 const b = "🅱"
   const type = args[0];
   const question = args.join(" ");
-  if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("no")
+  //if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("no")
   if(!type || !question){
   message.react('🤔');
     message.channel.send("**CORRECT USAGE: --vote [yes/no | option] [time (in ms)] [question] **");
