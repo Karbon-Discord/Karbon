@@ -2,6 +2,8 @@ const Discord = require('discord.js');
 const fs = require('fs');
 const ms = require('ms');
 let warns = require('../warnings.json');
+
+module.exports.run = async (bot, message, args) => {
 message.react('⚠');
 if(!message.member.hasPermission("MANAGE_MEMBERS")) return message.reply("You cannot do that!");
 let wUser = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
@@ -54,4 +56,11 @@ if(warns[wUser.id].warns === 3){
       wUser.removeRole(muterole.id);
     })
 }
+}
+}
+
+
+
+module.exports.help = {
+  name: "warn"
 }
