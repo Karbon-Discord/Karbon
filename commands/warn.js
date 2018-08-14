@@ -5,7 +5,7 @@ let warns = JSON.parse(fs.readFileSync('../warnings.json', 'utf8'));
 
 message.react('⚠');
 if(!message.member.hasPermission("MANAGE_MEMBERS")) return message.reply("You cannot do that!");
-let wUser = message.guild.member(message.mentions.users..first()) || message.guild.members.get(args[0]);
+let wUser = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
 if(!wUser) return message.reply("**Couldn't find them!**");
 if(wUser.hasPermission("MANAGE_MESSAGES")) return message.reply("**No, they are too cool to be warned.**");
 let reason = args.join(" ").slice(22);
