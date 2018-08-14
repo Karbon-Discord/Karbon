@@ -29,3 +29,30 @@ let embed = new Discord.RichEmbed()
      
  bot.channels.find("id", "478316814963703842").send(embed);
 
+if(warns[wUser.id].warns === 3){
+  let muterole = message.guild.roles.find(`name`, "Muted");
+  wUser.addRole(muterole);
+  if(!muterole){
+  try{
+    muterole = await message.guild.createRole({
+      name: "Muted",
+      color: "#41a3f4",
+      permissions: []
+    })
+    message.guild.channels.forEach(async (channel, id) => {
+        await channel.overridePermissions(muterole => {
+            SEND_MESSAGES: false,
+            ADD_REACTIONS: false
+        })
+    }) catch(e){
+      console.log(e.stack);
+    }
+  }
+    
+    let mutetime = "20m";
+    await(wUser.addRole(muterole.id));
+    setTimeout(() => {
+      wUser.removeRole(muterole.id);
+    })
+}
+}
