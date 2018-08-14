@@ -35,6 +35,8 @@ bot.on('guildMemberAdd', member => {
 });
 
 bot.on('guildMemberRemove', member => {
+        if(member.guild.id === "476141277411541012"){
+
     let embed = new Discord.RichEmbed()
       .setDescription(`:outbox_tray: **${member.user.tag}** has left the ship.`)
       .setFooter("User Left | Karbon's Lounge", member.user.displayAvatarURL)
@@ -43,6 +45,7 @@ bot.on('guildMemberRemove', member => {
   
     .setThumbnail(`${member.guild.iconURL}`);
     bot.channels.find("id", "478309556330430464").send(embed);
+        }
 });
 
 bot.on("message", (message) => {
