@@ -14,16 +14,12 @@ const b = "🅱"
     message.channel.send("**CORRECT USAGE: --vote [yes/no | option] [time (in ms)] [question] **");
   }
   else{
-  let msg = await message.guild.channels.find(`name`, 'vote').send(`@everyone **VOTING QUESTION: ${question}? You got ${time} seconds!`)
+  let msg = await message.guild.channels.find(`name`, 'vote').send(`@everyone **VOTING QUESTION: ${question}?`)
     if(type === "option"){
-      message.react(a);
-      message.react(b);
         await msg.react(a);
         await msg.react(b)
     }
        else if(type === "yes/no"){
-      message.react(agree);
-      message.react(disagree)
          await msg.react(agree);
         await msg.react(disagree)
     }
