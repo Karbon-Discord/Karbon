@@ -46,11 +46,10 @@ if(warns[wUser.id].warns === 3){
         })
     }) 
     
-    let mutetime = "10s";
     await(wUser.addRole(muterole.id));
     setTimeout(() => {
       wUser.removeRole(muterole.id);
-    }, ms(mutetime))
+    }, 10000)
 }
 }
   
@@ -64,18 +63,18 @@ if(warns[wUser.id].warns === 3){
      .setColor("#f44262")
   
     bot.channels.find("id", "478316814963703842").send(embed);
-    message.guild.member(kUser).kick(kReason);
+    message.guild.member(wUser).kick(reason);
   }
   
   if(warns[wUser.id].warns === 5){
      let embed = new Discord.RichEmbed()
-      .setDescription(`:no_entry: **${kUser.user.tag}** has been **banned**!`)
+      .setDescription(`:no_entry: **${wUser.user.tag}** has been **banned**!`)
       .addField("Banned By:",  `${message.author} (${message.author.id})`)
-      .addField("Reason Provided:", kReason)
+      .addField("Reason Provided:", reason)
      .setColor("#000000")
   
     bot.channels.find("id", "478316814963703842").send(embed);
-    message.guild.member(kUser).ban(kReason);
+    message.guild.member(wUser).ban(reason);
   }
   
   
