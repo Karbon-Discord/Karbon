@@ -44,10 +44,10 @@ if(warns[wUser.id].warns === 3){
             SEND_MESSAGES: false,
             ADD_REACTIONS: false
         })
-    }) catch(e){
+    }) 
+  }catch(e){
       console.log(e.stack);
     }
-  }
     
     let mutetime = "20m";
     await(wUser.addRole(muterole.id));
