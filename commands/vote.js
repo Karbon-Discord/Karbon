@@ -5,9 +5,9 @@ const Discord = require('discord.js');
 module.exports.run = async (bot, message, args) => {
   const agree = "✅"
 const disagree = "❌"
-  const question = args.join(" ");
+  const question = args.join(' ');
   //if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("no")
-  if(!!question){
+  if(!question){
   message.react('🤔');
     message.channel.send("**CORRECT USAGE: --vote [question] **");
   }
