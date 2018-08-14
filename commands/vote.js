@@ -1,13 +1,12 @@
 const Discord = require('discord.js');
-const fs = require('fs');
-const ms = require('ms');
-let warns = require('../warnings.json');
-const agree = "✅"
+
+
+
+module.exports.run = async (bot, message, args) => {
+  const agree = "✅"
 const disagree = "❌"
 const a = "🅰"
 const b = "🅱"
-
-module.exports.run = async (bot, message, args) => {
   const type = args[0];
   const time = args[1];
   const question = args.join(" ").slice(22);
