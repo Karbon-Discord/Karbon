@@ -18,7 +18,7 @@ const b = "🅱"
     if(type === "option"){
         await msg.react(a);
         await msg.react(b);
-          const reactions == await msg.awaitReactions(reaction => reaction.emoji.name == a || reaction.emoji.name == b, {time: 2000});
+          const reactions = await msg.awaitReactions(reaction => reaction.emoji.name == a || reaction.emoji.name == b, {time: 2000});
           message.channel.send(`Voting complete! We got ${reactions.get(a).count-1} as the first option, and ${reactions.get(b).count-1} as the second option!`);
           
 
