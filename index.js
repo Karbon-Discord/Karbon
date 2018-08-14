@@ -21,6 +21,7 @@ bot.on('ready', () => {
     bot.user.setActivity(`in ${bot.guilds.size} servers`)
 })
 bot.on('guildMemberAdd', member => {
+    if(member.guild.id === "476141277411541012"){
     bot.channels.find("id", "478309556330430464").send(`**Welcome aboard, ${member.user}! Please welcome him/her! If you have any questions, feel free to DM one of the Developers or me!** `);
     let embed = new Discord.RichEmbed()
       .setDescription(`:inbox_tray: **${member.user.tag}** has joined the server!`)
@@ -30,6 +31,7 @@ bot.on('guildMemberAdd', member => {
   
     .setThumbnail(`${member.guild.iconURL}`);
     bot.channels.find("id", "478309556330430464").send(embed);
+    }
 });
 
 bot.on('guildMemberRemove', member => {
