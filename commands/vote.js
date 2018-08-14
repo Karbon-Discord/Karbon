@@ -17,8 +17,7 @@ const disagree = "❌"
          await msg.react(agree);
         await msg.react(disagree)
         
-    
-    
+  }
     
 
 }
