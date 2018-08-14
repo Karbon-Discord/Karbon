@@ -16,6 +16,7 @@
     "cheerio": "^1.0.0-rc.2",
     "request": "^2.87.0",
      "opusscript": "^0.0.6",
-     "ffmpeg-binaries": "^4.0.0"
+     "ffmpeg-binaries": "^4.0.0",
+     "ms": "^2.1.1"
   }
 }
