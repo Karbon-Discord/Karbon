@@ -5,10 +5,7 @@ const Discord = require('discord.js');
 module.exports.run = async (bot, message, args) => {
   const agree = "✅"
 const disagree = "❌"
-const a = "🅰"
-const b = "🅱"
-  const type = args[0];
-  const question = args[1].join(" ");
+  const question = args.join(" ");
   //if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("no")
   if(!type || !question){
   message.react('🤔');
