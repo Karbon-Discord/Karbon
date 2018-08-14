@@ -34,7 +34,7 @@ if(warns[wUser.id].warns === 3){
   wUser.addRole(muterole);
   if(!muterole){
   try{
-    muterole = await message.guild.createRole({
+    muterole = message.guild.createRole({
       name: "Muted",
       color: "#41a3f4",
       permissions: []
