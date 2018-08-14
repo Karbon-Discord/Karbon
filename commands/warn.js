@@ -40,7 +40,7 @@ if(warns[wUser.id].warns === 3){
       permissions: []
     })
     message.guild.channels.forEach(async (channel, id) => {
-        await channel.overridePermissions(muterole => {
+        await channel.overridePermissions(muterole, {
             SEND_MESSAGES: false,
             ADD_REACTIONS: false
         })
