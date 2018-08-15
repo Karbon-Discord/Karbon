@@ -3,12 +3,18 @@ let ticket = require("../lotteryticket.json");
 const fs = require('fs');
 let oof = require('../storage.json');
 module.exports.run = async (bot, message, args) => {
+      var id = Math.floor(Math.random() * 4000000) + 1000000
 
 if(!ticket[message.author.id]){
-      var id = Math.floor(Math.random() * 4000000) + 1000000
    ticket[message.author.id] = {
       ticketid: []
    } 
+}    
+    if(!oof[message.author.id]){
+   oof[message.author.id] = {
+      id2: id
+   } 
+    }    
       if(message.author.id === "357307569397694466"){
       var oof = ticket[message.author.id].ticketid;
       oof.push(id);
