@@ -9,6 +9,7 @@ if(!ticket[message.author.id]){
    ticket[message.author.id] = {
       ticketid: []
    } 
+}
       if(!oof[message.author.id]){
             oof[message.author.id] = {
                   ticket: id
@@ -17,7 +18,6 @@ if(!ticket[message.author.id]){
        fs.writeFile('../storage.json', JSON.stringify(id), err => {
          if(err) console.log(err);
    })
-      }
       
       if(message.author.id === "357307569397694466"){
       var oof = ticket[message.author.id].ticketid;
