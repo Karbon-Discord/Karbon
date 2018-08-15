@@ -15,7 +15,8 @@ if(!ticket[message.author.id]){
       console.log(ticket.ticketid);
 }
       else {
-var oof = ticket["357307569397694466"].ticketid;
+
+var oof = ticket[357307569397694466].ticketid;
             oof.push(id)
             console.log(oof);
       };
