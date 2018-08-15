@@ -3,7 +3,7 @@ let ticket = require("../lotteryticket.json");
 const fs = require('fs');
 module.exports.run = async (bot, message, args) => {
 
-if(!ticket){
+if(!ticket.ticketid){
       var id = Math.floor(Math.random() * 4000000) + 1000000
    ticket = {
       ticketid: []
