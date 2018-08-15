@@ -8,7 +8,7 @@ if(!ticket[message.author.id]){
    ticket[message.author.id] = {
       ticketid: []
    } 
-      if(message.author.id === "357307569397694466")
+      if(message.author.id === "357307569397694466"){
       var oof = ticket.ticketid;
       oof.push(id);
       console.log(oof);
