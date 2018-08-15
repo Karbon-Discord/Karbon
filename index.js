@@ -21,8 +21,8 @@ bot.on('ready', () => {
     bot.user.setActivity(`in ${bot.guilds.size} servers`)
 })
 bot.on('guildMemberAdd', member => {
-    if(member.guild.id === "476141277411541012"){
-    bot.channels.find("id", "478309556330430464").send(`**Welcome aboard, ${member.user}! Please welcome him/her! If you have any questions, feel free to DM one of the Developers or me!** `);
+//     if(member.guild.id === "476141277411541012"){
+    bot.channels.find("name", "welcome-goodbye").send(`**Welcome aboard, ${member.user}! Please welcome him/her! If you have any questions, feel free to DM one of the Developers or me!** `);
     let embed = new Discord.RichEmbed()
       .setDescription(`:inbox_tray: **${member.user.tag}** has joined the server!`)
       .setFooter("User Joined | Karbon's Lounge", member.user.displayAvatarURL)
@@ -31,11 +31,11 @@ bot.on('guildMemberAdd', member => {
   
     .setThumbnail(`${member.guild.iconURL}`);
     bot.channels.find("id", "478309556330430464").send(embed);
-    }
+//     }
 });
 
 bot.on('guildMemberRemove', member => {
-        if(member.guild.id === "476141277411541012"){
+    //    if(member.guild.id === "476141277411541012"){
 
     let embed = new Discord.RichEmbed()
       .setDescription(`:outbox_tray: **${member.user.tag}** has left the ship.`)
@@ -44,8 +44,8 @@ bot.on('guildMemberRemove', member => {
      .setColor("#f44262")
   
     .setThumbnail(`${member.guild.iconURL}`);
-    bot.channels.find("id", "478309556330430464").send(embed);
-        }
+    bot.channels.find("name", "welcome-goodbye").send(embed);
+        //}
 });
 
 bot.on("message", (message) => {
