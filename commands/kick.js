@@ -14,7 +14,7 @@ module.exports.run = async (bot, message, args) => {
       .addField("Reason Provided:", kReason)
      .setColor("#f44262")
   
-    bot.channels.find("id", "478316814963703842").send(embed);
+    bot.channels.find("name", "mod-logs").send(embed);
     message.guild.member(kUser).kick(kReason);
 
 }
