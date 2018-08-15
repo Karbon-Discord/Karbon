@@ -15,7 +15,7 @@ if(!ticket.tickets){
    var oof = ticket.tickets;
    oof.push(`["id": ${message.author.id}, "ticket": ${id}]`);
    if(!ticket.tickets.id) console.log(':thinking:')
-   if(message.author.id != ticket.tickets.id)    oof.push(`["id": ${message.author.id}, "ticket": ${id}]`);
+//   if(message.author.id != ticket.tickets.id)    oof.push(`["id": ${message.author.id}, "ticket": ${id}]`);
    console.log(oof);
    fs.writeFile('../lotteryticket.json', JSON.stringify(id), err => {
          if(err) console.log(err);
