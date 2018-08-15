@@ -3,25 +3,23 @@ let ticket = require("../lotteryticket.json");
 const fs = require('fs');
 module.exports.run = async (bot, message, args) => {
 
-if(!ticket.tickets[message.author.username]){
+if(!ticket[message.author.username]){
       var id = Math.floor(Math.random() * 4000000) + 1000000
-   ticket = {
-      tickets[message.author.username]: {
-         ticketid: id
-      }
+   ticket[message.author.username] = {
+      ticketid: id
    } 
    
-      console.log(ticket.tickets[message.author.username]);
+      console.log(ticket);
 
-
+fs.writeFile('../lotteryticket.json', JSON.stringify(id), err => {
+         if(err) console.log(err);
+   })
+   
 //    var oof = ticket.tickets;
 //    oof.push('["id": ${message.author.id}, "ticket": ${id}]');
 //    if(ticket.tickets.id[message.author.id]) console.log('oof');
    
- fs.writeFile('../lotteryticket.json', JSON.stringify(id), err => {
-         if(err) console.log(err);
-   })
-   
+ 
     message.reply(`**Your ticket number is: ${id}. **`);
 
 }
