@@ -18,30 +18,25 @@ if(!ticket[message.author.id]){
       console.log(ticket)
 }
       else{
-
-var oof = ticket['357307569397694466'].ticketid;
-            oof.push(id)
-            console.log(oof);
+ var oof = ticket['357307569397694466'].ticketid;
+ oof.push(id)
+ console.log(oof);
       };
 fs.writeFile('../lotteryticket.json', JSON.stringify(id), err => {
          if(err) console.log(err);
    })
    
-//    var oof = ticket.tickets;
-//    oof.push('["id": ${message.author.id}, "ticket": ${id}]');
-//    if(ticket.tickets.id[message.author.id]) console.log('oof');
-   
- 
     message.reply(`**Your ticket number is: ${id}. **`);
 
 }
-   else{
-    message.reply("You have already generated a ticket!");
+//    else{
+//     message.reply("You have already generated a ticket!");
     
     
-  }
+//   }
 
-}
+} 
+
 
 module.exports.help = {
   name: "generate"
