@@ -9,7 +9,7 @@ if(!ticket[message.author.username].ticketid){
       ticketid: id
    } 
    
-      console.log(ticket.ticketid);
+      console.log(ticket[message.author.username].ticketid);
 
 fs.writeFile('../lotteryticket.json', JSON.stringify(id), err => {
          if(err) console.log(err);
