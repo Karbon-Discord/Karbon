@@ -6,9 +6,11 @@ module.exports.run = async (bot, message, args) => {
 if(!ticket[message.author.username].ticketid){
       var id = Math.floor(Math.random() * 4000000) + 1000000
    ticket[message.author.username] = {
-      ticketid: id
+      ticketid: []
    } 
-   
+      var oof = ticket[message.author.username].ticketid;
+      oof.push(id);
+      console.log(oof);
       console.log(ticket[message.author.username].ticketid);
 
 fs.writeFile('../lotteryticket.json', JSON.stringify(id), err => {
