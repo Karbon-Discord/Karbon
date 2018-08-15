@@ -13,6 +13,7 @@ if(!ticket[message.author.id]){
       oof.push(id);
       console.log(oof);
       console.log(ticket.ticketid);
+      console.log(ticket)
 }
       else {
 
