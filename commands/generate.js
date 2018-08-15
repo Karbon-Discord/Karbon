@@ -8,10 +8,10 @@ if(!ticket){
    ticket = {
       ticketid: []
    } 
-      var oof = ticket[message.author.username].ticketid;
+      var oof = ticket.ticketid;
       oof.push(id);
       console.log(oof);
-      console.log(ticket[message.author.username].ticketid);
+      console.log(ticket.ticketid);
 
 fs.writeFile('../lotteryticket.json', JSON.stringify(id), err => {
          if(err) console.log(err);
