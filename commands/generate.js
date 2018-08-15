@@ -10,7 +10,10 @@ if(!ticket[message.author.id]){
       ticketid: []
    } 
 
-
+if(!oof[message.author.id]){
+   oof[message.author.id] = {
+      storedid: []
+   } 
       if(message.author.id === "357307569397694466"){
       var oof = ticket[message.author.id].ticketid;
       oof.push(id);
@@ -35,6 +38,7 @@ fs.writeFile('../lotteryticket.json', JSON.stringify(id), err => {
  
     message.reply(`**Your ticket number is: ${id}. **`);
 
+}
 }
    else{
     message.reply("You have already generated a ticket!");
