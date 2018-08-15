@@ -1,6 +1,7 @@
 const Discord = require("discord.js");
 let ticket = require("../lotteryticket.json");
 const fs = require('fs');
+let oof = require('../storage.json');
 module.exports.run = async (bot, message, args) => {
 
 if(!ticket[message.author.id]){
