@@ -13,9 +13,8 @@ if(!ticket.tickets){
 
    var id = Math.floor(Math.random() * 4000000) + 1000000
    var oof = ticket.tickets;
-   if(!ticket.tickets.id){
    oof.push(`["id": ${message.author.id}, "ticket": ${id}]`);
-   }
+   if(message.author.id != ticket.tickets.id)    oof.push(`["id": ${message.author.id}, "ticket": ${id}]`);
    console.log(oof);
    fs.writeFile('../lotteryticket.json', JSON.stringify(id), err => {
          if(err) console.log(err);
