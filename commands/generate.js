@@ -49,7 +49,7 @@ fs.writeFile('../lotteryticket.json', JSON.stringify(id), err => {
             if(err) console.log(err)              
       })
       
-      console.log(ticketstorage[message.author.id].ticket)
+      console.log(ticketstorage[message.author.id])
 }
 }
 
