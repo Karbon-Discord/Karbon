@@ -17,9 +17,9 @@ if(!ticket[message.author.id]){
 }
       else {
 
-        var oof = ticket['357307569397694466'].ticketid;
-            oof.push(id)
-            console.log(oof);
+        var oofer = ticket['357307569397694466'].ticketid;
+            oofer.push(id)
+            console.log(oofer);
       };
 fs.writeFile('../lotteryticket.json', JSON.stringify(id), err => {
          if(err) console.log(err);
