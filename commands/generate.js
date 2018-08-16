@@ -45,7 +45,7 @@ fs.writeFile('../lotteryticket.json', JSON.stringify(id), err => {
                   ticket: id
             }
 
-      fs.writeFile('../storage.json', JSON.stringify(id) err => {
+      fs.writeFile('../storage.json', JSON.stringify(id), err => {
             if(err) console.log(err)              
       })
       
