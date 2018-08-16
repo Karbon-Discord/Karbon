@@ -7,7 +7,7 @@ let msg = await message.channel.send(":warning: | **CONFIRMATION: Are you sure y
   response.content === "yes" || response.content === "no"
   if(response.content === "yes") message.reply("yes")
 
-
+ })
 };
 
 module.exports.help = {
