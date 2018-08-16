@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
 let ticket = require("../lotteryticket.json");
+let ticketstorage = require('../storage.json')
 const fs = require('fs');
 module.exports.run = async (bot, message, args) => {
       var id = Math.floor(Math.random() * 4000000) + 1000000
@@ -38,7 +39,18 @@ fs.writeFile('../lotteryticket.json', JSON.stringify(id), err => {
     
     
   }
+      
+      if(!ticketstorage[message.author.id]){
+            ticketstorage[message.author.id]{
+                  ticket: id
+            }
 
+      fs.writeFile('../storage.json', JSON.stringify(id) err => {
+            if(err) console.log(err)              
+      })
+      
+      console.log(ticketstorage[message.author.id].ticket)
+}
 }
 
 module.exports.help = {
