@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 let ticket = require("../lotteryticket.json");
 const fs = require('fs');
-let oof = require('../storage.json');
+let oof2 = require('../storage.json');
 module.exports.run = async (bot, message, args) => {
       var id = Math.floor(Math.random() * 4000000) + 1000000
 
@@ -10,8 +10,8 @@ if(!ticket[message.author.id]){
       ticketid: []
    } 
 
-if(!oof[message.author.id]){
-   oof[message.author.id] = {
+if(!oof2[message.author.id]){
+   oof2[message.author.id] = {
       storedid: id
    } 
       if(message.author.id === "357307569397694466"){
