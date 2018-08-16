@@ -2,22 +2,10 @@ const Discord = require("discord.js");
 let ticket = require("../lotteryticket.json");
 
 module.exports.run = async (bot, message, args) => {
-   if(!ticket.tickets){
-   ticket = {
-      tickets: []
-   }
- }
-   
-   else{
-    //  var oof = ticket.ticketid;
-    //  console.log(oof);
-      console.log(ticket);
- }
-  
-// message.channel.send(ticket);
-  
-
-}
+let msg = await message.channel.send(":warning: | **CONFIRMATION: Are you sure you want to run the lottery and pick the winners?**");
+ const res = await message.awaitMessages(response => response.content === "yes" || response.content === "no", {time: 40000});
+ if(response.content === "yes") console.log("yes");
+};
 
 module.exports.help = {
   name: "lottery"
