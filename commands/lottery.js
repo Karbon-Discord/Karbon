@@ -6,7 +6,7 @@ let msg = await message.channel.send(":warning: | **CONFIRMATION: Are you sure y
  const res = await message.channel.awaitMessages(response => { 
   response.content === "yes" || response.content === "no" 
  
-  if(response.content === "yes") message.channel.send("yes");
+  if(res === "yes") message.channel.send("yes");
  });
 };
 
