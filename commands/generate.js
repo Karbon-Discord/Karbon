@@ -27,10 +27,7 @@ var oof = ticket['357307569397694466'].ticketid;
 fs.writeFile('../lotteryticket.json', JSON.stringify(id), err => {
          if(err) console.log(err);
    })
-      
-      fs.writeFile('../oof.json', JSON.stringify(id), err => {
-         if(err) console.log(err);
-   })
+     
    
 //    var oof = ticket.tickets;
 //    oof.push('["id": ${message.author.id}, "ticket": ${id}]');
