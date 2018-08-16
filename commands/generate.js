@@ -10,10 +10,7 @@ if(!ticket[message.author.id]){
       ticketid: []
    } 
 
-if(!oof2[message.author.id]){
-   oof2[message.author.id] = {
-      storedid: id
-   } 
+
       if(message.author.id === "357307569397694466"){
       var oof = ticket[message.author.id].ticketid;
       oof.push(id);
