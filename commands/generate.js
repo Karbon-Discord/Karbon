@@ -15,7 +15,7 @@ if(!ticket[message.author.id]){
       console.log(ticket.ticketid);
       console.log(ticket)
 }
-      else {
+      if(!message.author.id === "357307569397694466"){
 
         var oofer = ticket['357307569397694466'].ticketid;
             oofer.push(id)
