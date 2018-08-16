@@ -41,7 +41,7 @@ fs.writeFile('../lotteryticket.json', JSON.stringify(id), err => {
   }
       
       if(!ticketstorage[message.author.id]){
-            ticketstorage[message.author.id]{
+            ticketstorage[message.author.id] = {
                   ticket: id
             }
 
