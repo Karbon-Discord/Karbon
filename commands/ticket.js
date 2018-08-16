@@ -8,7 +8,7 @@ module.exports.run = async (bot, message, args) => {
   }
   else {
     message.react("🎫")
-    return message.reply(`:ticket: | **Your ticket number is: ${storage[message.author.id].ticket}`)
+    return message.reply(`:ticket: | **Your ticket number is: ${storage[message.author.id].ticket}**`)
     
   }    
 }
