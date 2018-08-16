@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) => {
 let msg = await message.channel.send(":warning: | **CONFIRMATION: Are you sure you want to run the lottery and pick the winners?**");
  const res = await message.channel.awaitMessages(response => {
   response.content === "yes" || response.content === "no"
-  if(response.content === "yes") message.reply("yes")
+  if(response.content === "yes") message.channel.send("yes")
 
  })
 };
