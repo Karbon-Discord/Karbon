@@ -16,39 +16,38 @@ let msg = await message.channel.send(":warning: | **CONFIRMATION: Are you sure y
   if(response.content === "yes"){
  //  message.reply(`Okay, so these are the winners of the lottery: <@${lol[randomness]}>, who earned 250 Katoms <@${lol[randomness2]}>, who earned 500 Katoms, as well as <@lol[randomness3>, who earned 750 Katoms + A special role!`)
 
- var thirdplace = Math.random() * lol.length;
-  var secondplace = Math.random() * lol.length;
-  var firstplace = Math.random() * lol.length;
-if(!katoms[thirdplace]){
- katoms[thirdplace] = {
+ var thirdplace = Math.floor(Math.random() * lol.length);
+  var secondplace = Math.floor(Math.random() * lol.length);
+  var firstplace = Math.floor(Math.random() * lol.length);
+if(!katoms[lol[thirdplace]]){
+ katoms[lol[thirdplace]] = {
   katoms:100
  }
-  katoms[thirdplace].katoms = katoms[`${thirdplace}`].katoms += num1;
+  katoms[lol[thirdplace]].katoms = katoms[`${lol[thirdplace]}`].katoms += num1;
  fs.writeFile('../katoms.json', JSON.stringify(katoms), err => {
    if(err) console.log(err);
  })
- console.log(katoms[thirdplace])
 }   
    
-   else{  katoms[thirdplace].katoms = katoms[`${thirdplace}`].katoms += num2;
+   else{  katoms[lol[thirdplace]].katoms = katoms[`${lol[thirdplace]}`].katoms += num2;
    
     fs.writeFile('../katoms.json', JSON.stringify(katoms), err => {
    if(err) console.log(err);
     })
        }
    
-   if(!katoms[secondplace]){
- katoms[secondplace] = {
+   if(!katoms[lol[secondplace]]){
+ katoms[lol[secondplace]] = {
   katoms:100
  }
-  katoms[thirdplace].katoms = katoms[`${secondplace}`].katoms += num2;
+  katoms[lol[secondplace]].katoms = katoms[`${lol[secondplace]}`].katoms += num2;
  fs.writeFile('../katoms.json', JSON.stringify(katoms), err => {
    if(err) console.log(err);
  })
  console.log(katoms[thirdplace])
 }   
 
-   else{  katoms[secondplace].katoms = katoms[`${thirdplace}`].katoms += num2;
+   else{  katoms[lol[secondplace]].katoms = katoms[`lol[${secondplace}]`].katoms += num2;
    
     fs.writeFile('../katoms.json', JSON.stringify(katoms), err => {
    if(err) console.log(err);
@@ -57,18 +56,18 @@ if(!katoms[thirdplace]){
   }
   
   
-  if(!katoms[firstplace]){
- katoms[firstplace] = {
+  if(!katoms[lol[firstplace]]){
+ katoms[lol[firstplace]] = {
   katoms:100
  }
-  katoms[thirdplace].katoms = katoms[`${firstplace}`].katoms += num3;
+  katoms[lol[firstplace]].katoms = katoms[`${lol[firstplace]}`].katoms += num3;
  fs.writeFile('../katoms.json', JSON.stringify(katoms), err => {
    if(err) console.log(err);
  })
  console.log(katoms[thirdplace])
 }   
   
-else {  katoms[thirdplace].katoms = katoms[`${firstplace}`].katoms += num3;  fs.writeFile('../katoms.json', JSON.stringify(katoms), err => {
+else {  katoms[lol[firstplace]].katoms = katoms[`${lol[firstplace]}`].katoms += num3;  fs.writeFile('../katoms.json', JSON.stringify(katoms), err => {
    if(err) console.log(err);
  })
      }
