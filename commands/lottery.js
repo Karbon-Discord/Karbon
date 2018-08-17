@@ -34,7 +34,8 @@ if(!katoms[thirdplace]){
    
     fs.writeFile('../katoms.json', JSON.stringify(katoms), err => {
    if(err) console.log(err);
-    }
+    })
+       }
    
    if(!katoms[secondplace]){
  katoms[secondplace] = {
