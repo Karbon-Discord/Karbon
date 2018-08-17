@@ -4,7 +4,8 @@ let katoms = require("../katoms.json");
 const fs = require('fs');
 module.exports.run = async (bot, message, args) => {
  
- 
+ console.log(ticket) 
+
  var lol = Object.keys(ticket)
  console.log(lol)
 let msg = await message.channel.send(":warning: | **CONFIRMATION: Are you sure you want to run the lottery and pick the winners?**");
@@ -19,7 +20,6 @@ let msg = await message.channel.send(":warning: | **CONFIRMATION: Are you sure y
    
 katoms[thirdplace].katoms = katoms[`${thirdplace}`].katoms += 250;
 console.log(katoms[`${thirdplace}`].katoms);
-console.log(ticket) 
   }
   else if(response.content === "no") return message.reply(":x: | **Lottery Canceled**")
  })
