@@ -13,12 +13,12 @@ let msg = await message.channel.send(":warning: | **CONFIRMATION: Are you sure y
   if(response.content === "yes"){
  //  message.reply(`Okay, so these are the winners of the lottery: <@${lol[randomness]}>, who earned 250 Katoms <@${lol[randomness2]}>, who earned 500 Katoms, as well as <@lol[randomness3>, who earned 750 Katoms + A special role!`)
 
-var thirdplace = Math.random() * lol.length;
-var secondplace = Math.random() * lol.length;
-var firstplace = Math.random() * lol.length;
+ var thirdplace = Math.random() * lol.length;
+//  var secondplace = Math.random() * lol.length;
+//  var firstplace = Math.random() * lol.length;
    
-katoms[thirdplace].katoms = katoms[thirdplace].katoms += 250;
-console.log(katoms[thirdplace].katoms);
+katoms[thirdplace].katoms = katoms[`${thirdplace}`].katoms += 250;
+console.log(katoms[`${thirdplace}`].katoms);
 console.log(ticket) 
   }
   else if(response.content === "no") return message.reply(":x: | **Lottery Canceled**")
