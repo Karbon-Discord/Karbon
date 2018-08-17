@@ -27,6 +27,7 @@ if(!katoms[thirdplace]){
  fs.writeFile('../katoms.json', JSON.stringify(katoms), err => {
    if(err) console.log(err);
  })
+ console.log(katoms[thirdplace])
 }   
 
    else  katoms[thirdplace].katoms = katoms[`${thirdplace}`].katoms += num1;
