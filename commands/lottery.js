@@ -75,11 +75,11 @@ else {  katoms[lol[firstplace]].katoms = katoms[`${lol[firstplace]}`].katoms += 
         var embed = new Discord.RichEmbed()
         .setColor("#f4ad42")
         .setTitle("**LOTTERY WINNERS!**")
-        .addField(`:third_place: Third Place Winner`, `<@${thirdplace}>`)
+        .addField(`:third_place: Third Place Winner`, `<@${lol[thirdplace]}>`)
         .addField(`:money_with_wings: Katoms Earned`, `${num1}`)
-        .addField(`:second_place: Second Place Winner`, `<@${secondplace}>`)
+        .addField(`:second_place: Second Place Winner`, `<@${lol[secondplace]}>`)
         .addField(`:money_with_wings: Katoms Earned`, `${num2}`)
-        .addField(`:first_place: First Place Winner`, `<@${firstplace}>`)
+        .addField(`:first_place: First Place Winner`, `<@${lol[firstplace]}>`)
         .addField(`:money_with_wings: Katoms Earned`, `${num3}`);
         message.channel.send(embed);
   }
