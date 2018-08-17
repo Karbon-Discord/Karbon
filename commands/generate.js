@@ -1,35 +1,18 @@
+
 const Discord = require("discord.js");
 let ticket = require("../lotteryticket.json");
-let ticketstorage = require('../storage.json')
 const fs = require('fs');
 module.exports.run = async (bot, message, args) => {
       var id = Math.floor(Math.random() * 99) + 1
 
 if(!ticket[message.author.id]){
    ticket[message.author.id] = {
-      ticketid: []
+      ticketid: id
    } 
-      if(message.author.id === "357307569397694466"){
-      var oof = ticket[message.author.id].ticketid;
-      oof.push(id);
-      console.log(oof);
-      console.log(ticket.ticketid);
-      console.log(ticket)
-}
-      else{
-
-        var oofer = ticket['357307569397694466'].ticketid;
-            oofer.push(id)
-            console.log(oofer);
-      };
 fs.writeFile('../lotteryticket.json', JSON.stringify(id), err => {
          if(err) console.log(err);
    })
-   
-//    var oof = ticket.tickets;
-//    oof.push('["id": ${message.author.id}, "ticket": ${id}]');
-//    if(ticket.tickets.id[message.author.id]) console.log('oof');
-   
+  
  
     message.reply(`**Your ticket number is: ${id}. **`);
 
@@ -39,18 +22,7 @@ fs.writeFile('../lotteryticket.json', JSON.stringify(id), err => {
     
     
   }
-      
-      if(!ticketstorage[message.author.id]){
-            ticketstorage[message.author.id] = {
-                  ticket: id
-            }
-
-      fs.writeFile('../storage.json', JSON.stringify(id), err => {
-            if(err) console.log(err)              
-      })
-      
-      console.log(ticketstorage[message.author.id])
-}
+     
 }
 
 module.exports.help = {
