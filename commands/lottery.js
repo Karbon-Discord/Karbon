@@ -47,7 +47,7 @@ if(!katoms[lol[thirdplace]]){
  console.log(katoms[thirdplace])
 }   
 
-   else{  katoms[lol[secondplace]].katoms = katoms[`lol[${secondplace}]`].katoms += num2;
+   else{  katoms[lol[secondplace]].katoms = katoms[`${lol[secondplace]}`].katoms += num2;
    
     fs.writeFile('../katoms.json', JSON.stringify(katoms), err => {
    if(err) console.log(err);
