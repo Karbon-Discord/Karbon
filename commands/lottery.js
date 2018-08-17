@@ -81,8 +81,9 @@ else {  katoms[thirdplace].katoms = katoms[`${firstplace}`].katoms += num3;  fs.
         .addField(`:second_place: Second Place Winner`, `<@${secondplace}>`)
         .addField(`:money_with_wings: Katoms Earned`, `${num2}`)
         .addField(`:first_place: First Place Winner`, `<@${firstplace}>`)
-        .addField(`:money_with_wings: Katoms Earned`, `${num3}`)
-  
+        .addField(`:money_with_wings: Katoms Earned`, `${num3}`);
+        message.channel.send(embed);
+  }
   
   else if(response.content === "no") return message.reply(":x: | **Lottery Canceled**")
  })
