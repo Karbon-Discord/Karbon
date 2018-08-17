@@ -29,9 +29,59 @@ if(!katoms[thirdplace]){
  })
  console.log(katoms[thirdplace])
 }   
+   
+   else{  katoms[thirdplace].katoms = katoms[`${thirdplace}`].katoms += num2;
+   
+    fs.writeFile('../katoms.json', JSON.stringify(katoms), err => {
+   if(err) console.log(err);
+    }
+   
+   if(!katoms[secondplace]){
+ katoms[secondplace] = {
+  katoms:100
+ }
+  katoms[thirdplace].katoms = katoms[`${secondplace}`].katoms += num2;
+ fs.writeFile('../katoms.json', JSON.stringify(katoms), err => {
+   if(err) console.log(err);
+ })
+ console.log(katoms[thirdplace])
+}   
 
-   else  katoms[thirdplace].katoms = katoms[`${thirdplace}`].katoms += num1;
+   else{  katoms[secondplace].katoms = katoms[`${thirdplace}`].katoms += num2;
+   
+    fs.writeFile('../katoms.json', JSON.stringify(katoms), err => {
+   if(err) console.log(err);
+    }
+ })
   }
+  
+  
+  if(!katoms[firstplace]){
+ katoms[firstplace] = {
+  katoms:100
+ }
+  katoms[thirdplace].katoms = katoms[`${firstplace}`].katoms += num3;
+ fs.writeFile('../katoms.json', JSON.stringify(katoms), err => {
+   if(err) console.log(err);
+ })
+ console.log(katoms[thirdplace])
+}   
+  
+else   katoms[thirdplace].katoms = katoms[`${firstplace}`].katoms += num3;  fs.writeFile('../katoms.json', JSON.stringify(katoms), err => {
+   if(err) console.log(err);
+ })
+  
+        var embed = new Discord.RichEmbed()
+        .setColor("#f4ad42")
+        .setTitle("**LOTTERY WINNERS!**")
+        .addField(`:third_place: Third Place Winner`, `<@${thirdplace}>`)
+        .addField(`:money_with_wings: Katoms Earned`, `${num1}`)
+        .addField(`:second_place: Second Place Winner`, `<@${secondplace}>`)
+        .addField(`:money_with_wings: Katoms Earned`, `${num2}`)
+        .addField(`:first_place: First Place Winner`, `<@${firstplace}>`)
+        .addField(`:money_with_wings: Katoms Earned`, `${num3}`)
+  
+  
   else if(response.content === "no") return message.reply(":x: | **Lottery Canceled**")
  })
 };
