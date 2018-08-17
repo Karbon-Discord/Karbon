@@ -6,7 +6,7 @@ module.exports.run = async (bot, message, args) => {
  
 var num1 = Math.floor(Math.random() * 100) + 150;
  var num2 = Math.floor(Math.random() * 200) + 300;
- var num3 = Math.floor(Math.random() * 500) + 300;
+ var num3 = Math.floor(Math.random() * 500) + 500;
 
  var lol = Object.keys(ticket)
  console.log(lol)
