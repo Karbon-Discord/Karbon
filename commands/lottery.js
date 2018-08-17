@@ -11,11 +11,7 @@ module.exports.run = async (bot, message, args) => {
 let random = Math.floor(Math.random() * 250) + 170
 let random2 = Math.floor(Math.random() * 500) + 340
 let random3 = Math.floor(Math.random() * 750) + 510
- if(!katoms[message.author.id]){
-  katoms[message.author.id] = {
-   katom:0
-  }
-};
+
  
  
  console.log(lol)
@@ -29,7 +25,16 @@ let msg = await message.channel.send(":warning: | **CONFIRMATION: Are you sure y
   fs.writeFile('../katoms.json', JSON.stringify(random), err => {
    if(err) console.log(err);
   })
-
+ if(!katoms[lol[randomness]]){
+   katoms[lol[randomness]] = {
+    katom:random
+   }
+  fs.writeFile('../katoms.json', JSON.stringify(random), err => {
+   if(err) console.log(err);
+  })
+ };
+   
+   
      katoms[`${lol[randomness2]}`].katom =  katoms[`${lol[randomness]}`].katom + random2;
   fs.writeFile('../katoms.json', JSON.stringify(random2), err => {
    if(err) console.log(err);
