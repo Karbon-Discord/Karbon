@@ -4,7 +4,7 @@ let katoms = require("../katoms.json");
 const fs = require('fs');
 module.exports.run = async (bot, message, args) => {
  
- console.log(ticket) 
+
 
  var lol = Object.keys(ticket)
  console.log(lol)
