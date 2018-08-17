@@ -21,28 +21,28 @@ let msg = await message.channel.send(":warning: | **CONFIRMATION: Are you sure y
   if(response.content === "yes"){
    message.reply(`Okay, so these are the winners of the lottery: <@${lol[randomness]}>, who earned 250 Katoms <@${lol[randomness2]}>, who earned 500 Katoms, as well as <@lol[randomness3>, who earned 750 Katoms + A special role!`)
 
-  katoms[`${lol[randomness]}`].katom =  katoms[`${lol[randomness]}`].katom + random;
-  fs.writeFile('../katoms.json', JSON.stringify(random), err => {
-   if(err) console.log(err);
-  })
- if(!katoms[lol[randomness]]){
-   katoms[lol[randomness]] = {
-    katom:random
-   }
-  fs.writeFile('../katoms.json', JSON.stringify(random), err => {
-   if(err) console.log(err);
-  })
- };
+//   katoms[`${lol[randomness]}`].katom =  katoms[`${lol[randomness]}`].katom + random;
+//   fs.writeFile('../katoms.json', JSON.stringify(random), err => {
+//    if(err) console.log(err);
+//   })
+//  if(!katoms[lol[randomness]]){
+//    katoms[lol[randomness]] = {
+//     katom:random
+//    }
+//   fs.writeFile('../katoms.json', JSON.stringify(random), err => {
+//    if(err) console.log(err);
+//   })
+//  };
    
    
-     katoms[`${lol[randomness2]}`].katom =  katoms[`${lol[randomness]}`].katom + random2;
-  fs.writeFile('../katoms.json', JSON.stringify(random2), err => {
-   if(err) console.log(err);
-  })
-     katoms[`${lol[randomness3]}`].katom =  katoms[`${lol[randomness3]}`].katom + random3;
-  fs.writeFile('../katoms.json', JSON.stringify(random3), err => {
-   if(err) console.log(err);
-  })
+//      katoms[`${lol[randomness2]}`].katom =  katoms[`${lol[randomness]}`].katom + random2;
+//   fs.writeFile('../katoms.json', JSON.stringify(random2), err => {
+//    if(err) console.log(err);
+//   })
+//      katoms[`${lol[randomness3]}`].katom =  katoms[`${lol[randomness3]}`].katom + random3;
+//   fs.writeFile('../katoms.json', JSON.stringify(random3), err => {
+//    if(err) console.log(err);
+//   })
   }
   else if(response.content === "no") return message.reply(":x: | **Lottery Canceled**")
  })
