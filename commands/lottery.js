@@ -23,21 +23,7 @@ let msg = await message.channel.send(":warning: | **CONFIRMATION: Are you sure y
   if(response.content === "yes"){
    message.reply(`Okay, so these are the winners of the lottery: <@${lol[randomness]}>, who earned 250 Katoms <@${lol[randomness2]}>, who earned 500 Katoms, as well as <@lol[randomness3>, who earned 750 Katoms + A special role!`)
 
-   katoms[`${lol[randomness]}`].katoms += 250;
-   katoms[`${lol[randomness2]}`].katoms += 500;
-  katoms[lol[randomness3]].katoms += 750;
-   var winner1 = 250;
-   var winner2 = 500;
-   var winner3 = 750;
-   
-      katoms[`${lol[randomness]}`].katoms += winner1;
-   katoms[`${lol[randomness2]}`].katoms += winner2;
-  katoms[lol[randomness3]].katoms += winner3;
-   
-   fs.writeFile('../katoms.json', JSON.stringify(winner1), err => {if(err) console.log(err);})
-   fs.writeFile('../katoms.json', JSON.stringify(winner2), err => {if(err) console.log(err);})
-      fs.writeFile('../katoms.json', JSON.stringify(winner3), err => {if(err) console.log(err);})
-   console.log(katoms);
+  console.log(lol);
 
   }
   else if(response.content === "no") return message.reply(":x: | **Lottery Canceled**")
