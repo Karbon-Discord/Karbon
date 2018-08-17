@@ -52,7 +52,7 @@ if(!katoms[thirdplace]){
    
     fs.writeFile('../katoms.json', JSON.stringify(katoms), err => {
    if(err) console.log(err);
-    }
+
  })
   }
   
@@ -68,9 +68,10 @@ if(!katoms[thirdplace]){
  console.log(katoms[thirdplace])
 }   
   
-else   katoms[thirdplace].katoms = katoms[`${firstplace}`].katoms += num3;  fs.writeFile('../katoms.json', JSON.stringify(katoms), err => {
+else {  katoms[thirdplace].katoms = katoms[`${firstplace}`].katoms += num3;  fs.writeFile('../katoms.json', JSON.stringify(katoms), err => {
    if(err) console.log(err);
  })
+     }
   
         var embed = new Discord.RichEmbed()
         .setColor("#f4ad42")
