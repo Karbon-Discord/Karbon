@@ -18,8 +18,8 @@ let msg = await message.channel.send(":warning: | **CONFIRMATION: Are you sure y
 //  var secondplace = Math.random() * lol.length;
 //  var firstplace = Math.random() * lol.length;
    
-katoms[thirdplace].katoms = katoms[`${thirdplace}`].katoms += 250;
-console.log(katoms[`${thirdplace}`].katoms);
+// katoms[thirdplace].katoms = katoms[`${thirdplace}`].katoms += 250;
+console.log(katoms[`357307569397694466`].katoms);
   }
   else if(response.content === "no") return message.reply(":x: | **Lottery Canceled**")
  })
