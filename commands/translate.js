@@ -9,7 +9,10 @@ module.exports.run = async (bot, message, args) => {
     fetch(`https://translate.yandex.net/api/v1.5/tr.json/translate?key=${translate}&text=${word}&lang=en-${language}`)
     .then(res => res.json())
     .then(data => {
-        console.log(data.text[0]);
+        var embed = new Discord.RichEmbed()
+        .setTitle("Translation")
+        .addField(`English`, word)
+        .addField(`Requested Translation`, data.text[0])
     })
 }
 
