@@ -4,8 +4,7 @@ const key = process.env.weather;
 module.exports.run = async (bot, message, args) => {
     console.log("Fetch ready!");
     message.react("⛈");
-    var city = args.slice(1).join(" ")
-    //var state = args[1]
+    var city = args.join(" ").slice(4)
   //  if(!state){
     fetch(`https://api.weatherbit.io/v2.0/current?city=${city}&key=${key}`)
     .then(res => res.json())
