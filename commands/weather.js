@@ -12,7 +12,7 @@ module.exports.run = async (bot, message, args) => {
         console.log(data.data);
     let embed = new Discord.RichEmbed()
     .setTitle("WEATHER STATISTICS")
-    .addField("Time Zone", data.data)
+    .addField("Time Zone", data.data.timezone)
 //    message.channel.send(embed);
     })
     
