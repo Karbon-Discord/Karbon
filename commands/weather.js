@@ -17,7 +17,7 @@ module.exports.run = async (bot, message, args) => {
     .addField("Time Zone", data.data[0].timezone)
     .addField("Temperature (Celcius)", data.data[0].temp)
     .addField("Appearance", data.data[0].weather.description)
-    .addField("Precipitation", `${data.data[0].precip}%`)
+    .addField("Precipitation", `${data.data[1].precip}%`)
     .addField("Wind Direction", data.data[0].wind_cdir)
     .addField("UV Index", data.data[0].uv)
     message.channel.send(embed);
