@@ -6,7 +6,7 @@ module.exports.run = async (bot, message, args) => {
     message.react("📚");
     var word = args[0]
     var language = args[1]
-    fetch(`https://translate.yandex.net/api/v1.5/tr.json/translate?key=${translate}&text=${word}&lang=${language}`)
+    fetch(`https://translate.yandex.net/api/v1.5/tr.json/translate?key=${translate}&text=${word}&lang=en-${language}`)
     .then(res => res.json())
     .then(data => {
         console.log(data);
@@ -14,5 +14,5 @@ module.exports.run = async (bot, message, args) => {
 }
 
 module.exports.help = {
-  name: "define"
+  name: "translate"
 }
