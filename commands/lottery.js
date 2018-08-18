@@ -79,11 +79,11 @@ else {  katoms[lol[firstplace]].katoms = katoms[`${lol[firstplace]}`].katoms += 
         .setColor("#f4ad42")
         .setTitle("**LOTTERY WINNERS!**")
         .addField(`:third_place: Third Place Winner`, `<@${lol[thirdplace]}>`)
-        .addField(`:money_with_wings: Katoms Earned`, `${num1}`)
+        .addField(`:money_with_wings: K-Atoms Earned`, `${num1}`)
         .addField(`:second_place: Second Place Winner`, `<@${lol[secondplace]}>`)
-        .addField(`:money_with_wings: Katoms Earned`, `${num2}`)
+        .addField(`:money_with_wings: K-Atoms Earned`, `${num2}`)
         .addField(`:first_place: First Place Winner`, `<@${lol[firstplace]}>`)
-        .addField(`:money_with_wings: Katoms Earned`, `${num3}`);
+        .addField(`:money_with_wings: K-Atoms Earned`, `${num3}`);
         message.channel.send(embed);
    
   }
