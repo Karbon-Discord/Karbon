@@ -1,0 +1,10 @@
+**COMMANDS FOR KARBON**
+
+**INFORMATION RELATED**
+--botinfo: Gives info about the bot
+
+
+**MODERATION**
+--ban [user] [reason]: Bans a requested member *
+--delete [num. msgs]: Deletes a given number of messages *
+--kick [user] [reason]:  
