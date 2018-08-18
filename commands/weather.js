@@ -9,10 +9,11 @@ module.exports.run = async (bot, message, args) => {
     fetch(`https://api.weatherbit.io/v2.0/current?city=${city}&key=${key}`)
     .then(res => res.json())
     .then(data => {
+        console.log(data.data);
     let embed = new Discord.RichEmbed()
     .setTitle("WEATHER STATISTICS")
-    .addField("Time Zone", data.data[timezone])
-    message.channel.send(embed);
+    .addField("Time Zone", data.data)
+//    message.channel.send(embed);
     })
     
 //}
