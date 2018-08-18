@@ -5,6 +5,7 @@ module.exports.run = async (bot, message, args) => {
     console.log("Fetch ready!");
     message.react("⛈");
     var city = args.join(" ").slice(1)
+    console.log(city);
   //  if(!state){
     fetch(`https://api.weatherbit.io/v2.0/current?city=${city}&key=${key}`)
     .then(res => res.json())
