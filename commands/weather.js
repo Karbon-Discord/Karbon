@@ -12,6 +12,7 @@ module.exports.run = async (bot, message, args) => {
         console.log(data.data[0].timezone);
     let embed = new Discord.RichEmbed()
     .setTitle("WEATHER STATISTICS")
+    .setColor("#1eaefc")
     .addField("Time Zone", data.data[0].timezone)
     .addField("Temperature (Celcius)", data.data[0].temp)
     .addField("Appearance", data.data[0].weather.description)
