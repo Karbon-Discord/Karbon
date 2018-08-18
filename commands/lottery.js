@@ -45,6 +45,10 @@ if(!katoms[lol[thirdplace]]){
    if(err) console.log(err);
  })
  console.log(katoms[thirdplace])
+    
+    
+    fs.truncate("../lotteryticket.json", 0, function(err){ console.log(err); })
+    console.log(ticket)
 }   
 
    else{  katoms[lol[secondplace]].katoms = katoms[`${lol[secondplace]}`].katoms += num2;
