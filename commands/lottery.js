@@ -86,7 +86,7 @@ else {  katoms[lol[firstplace]].katoms = katoms[`${lol[firstplace]}`].katoms += 
         .addField(`:money_with_wings: Katoms Earned`, `${num3}`);
         message.channel.send(embed);
    
-   fs.truncate("../lotteryticket.json", 0, function(err){ console.log(err); })
+   fs.truncate("../lotteryticket.json", 100, function(err){ console.log(err); })
     console.log(ticket)
   }
   
