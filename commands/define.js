@@ -8,7 +8,7 @@ module.exports.run = async (bot, message, args) => {
     fetch(`https://dictionary.yandex.net/api/v1/dicservice.json/lookup?key=${dictionary}&lang=en-ru&text=${word}`)
     .then(res => res.json())
     .then(data => {
-        console.log(data.def.tr);
+        console.log(data.def);
     })
 }
 
