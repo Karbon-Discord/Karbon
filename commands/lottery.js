@@ -47,8 +47,7 @@ if(!katoms[lol[thirdplace]]){
  console.log(katoms[thirdplace])
     
     
-    fs.truncate("../lotteryticket.json", 0, function(err){ console.log(err); })
-    console.log(ticket)
+    
 }   
 
    else{  katoms[lol[secondplace]].katoms = katoms[`${lol[secondplace]}`].katoms += num2;
@@ -86,6 +85,9 @@ else {  katoms[lol[firstplace]].katoms = katoms[`${lol[firstplace]}`].katoms += 
         .addField(`:first_place: First Place Winner`, `<@${lol[firstplace]}>`)
         .addField(`:money_with_wings: Katoms Earned`, `${num3}`);
         message.channel.send(embed);
+   
+   fs.truncate("../lotteryticket.json", 0, function(err){ console.log(err); })
+    console.log(ticket)
   }
   
   else if(response.content === "no") return message.reply(":x: | **Lottery Canceled**")
