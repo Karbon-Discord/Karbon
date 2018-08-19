@@ -6,7 +6,7 @@ The <discord_user> argument syntax is: @DiscordUsername#NNNN where NNNN is the u
 /!\ IMPORTANT: PLEASE RUN --createkatoms TO ENABLE YOU TO EARN/SPEND KATOMS BEFORE RUNNING ANY KATOM-RELATED COMMANDS.
 
 **BOT INFORMATION**
---botinfo: Returns information about the bot.
+--about: Returns information about the bot and its creators.
 
 **MODERATION**
 --ban <discord_user> <reason>
