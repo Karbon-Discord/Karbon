@@ -11,7 +11,7 @@ module.exports.run = async (bot, message, args) => {
     .then(data => {
         var embed = new Discord.RichEmbed()
         .setTitle("Translation")
-        .addField(`English`, word)
+        .addField(`English`, phrase)
         .addField(`Requested Translation`, data.text[0]);
         message.channel.send(embed);
     })
