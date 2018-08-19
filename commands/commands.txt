@@ -23,7 +23,7 @@ Deletes the specified number of messages.
 DM's a command list to the sender.
 --weather <city>
 Returns weather information for the specified city. Only works for cities in the United States.
---translate <string> <lang_code>
+--translate <lang_code> <string>
 Translates the specified string with Yandex to the specified two-character language code (e.g. en, es NOT en-US, es-MX).
 --neocities <neocities_sitename>
 Returns the Neocities (https://neocities.org/) website statistics of the specified Neocities site.
