@@ -3,12 +3,11 @@ const request = require('request');
 const cheerio = require('cheerio');
 module.exports.run = async (bot, message, args) => {
     var user = args[0];
-    var views, follow, update, tip, lastupdate, create;
+    var views, follow, update, tip, lastupdate, create, first;
     request(`https://neocities.org/site/${user}`, (error, response, html) => {
         if(!error && response.statusCode === 200){
           const $ = cheerio.load(html);
-          const comment = $('.news-item');
-
+    
           var arr = [];
 
           $('.stat strong').each(function( index ) {
@@ -21,8 +20,14 @@ module.exports.run = async (bot, message, args) => {
               create = arr[5]
             
       });
+        $('.news-item comment .content').each(index => {
+            var arr2 = [];
+            arr2.push($(this).text().trim());
+            first = arr2[0];
+        })
  let embed = new Discord.RichEmbed()
         .setTitle(`Neocities stats for ${user}`)
+        .setDescription(`Amazing quote: ***${first}***`)
         .setColor("#42f4d7")
         .addField(":eyes: Views", views, true)
         .addField(":dolphin: Followers", follow, true)
