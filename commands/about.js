@@ -9,12 +9,15 @@ module.exports.run = async (bot, message, args) => {
   .setColor("#072b66")
   .setThumbnail(bicon)
   .addField("Name", bot.user.username)
-  .addField("Created", bot.user.createdAt);
+  .addField("Created", bot.user.createdAt)
+  .addField("Servers", bot.guilds.size)
+  .addField("Members", bot.users.size);
+  
   
   message.channel.send(botembed)
 
 }
 
 module.exports.help = {
-  name: "botinfo"
+  name: "about"
 }
