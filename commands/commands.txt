@@ -2,60 +2,40 @@
 Written by: CerebralDatabank (Discord: @CerebralDatabank#7772, Web: https://cerebraldatabank.neocities.org/)
 Commands labeled [BETA] are still in development and may not function as intended.
 The <discord_user> argument syntax is: @DiscordUsername#NNNN where NNNN is the user's Discord Tag.
-
 /!\ IMPORTANT: PLEASE RUN --createkatoms TO ENABLE YOU TO EARN/SPEND KATOMS BEFORE RUNNING ANY KATOM-RELATED COMMANDS.
 
 **BOT INFORMATION**
 --about: Returns information about the bot and its creators.
 
 **MODERATION**
---ban <discord_user> <reason>
-Bans the specified user from the server with the specified reason.
---kick <discord_user> <reason>
-Kicks the specified user from the server with the specified reason.
---warn <discord_user> <reason>
-Warns the specified user with the specified reason. For convenience, the number of warnings is stored per user.
---delete <number_of_messages>
-Deletes the specified number of messages.
+--ban <discord_user> <reason>: Bans the specified user from the server with the specified reason.
+--kick <discord_user> <reason>: Kicks the specified user from the server with the specified reason.
+--warn <discord_user> <reason>: Warns the specified user with the specified reason. For convenience, the number of warnings is stored per user.
+--delete <number_of_messages>: Deletes the specified number of messages.
 
 **INFORMATION**
---help
-DM's a command list to the sender.
---weather <city>
-Returns weather information for the specified city. Only works for cities in the United States.
---translate <string> <lang_code>
-Translates the specified string with Yandex to the specified two-character language code (e.g. en, es NOT en-US, es-MX).
---neocities <neocities_sitename>
-Returns the Neocities (https://neocities.org/) website statistics of the specified Neocities site.
---fortnite <fortnite_username> [pc|xbl|psn]
-Returns the Fortnite statistics of the specified username on the specified platform (PC, XBOX Live, or PlayStation).
---discordid
-Returns the Discord ID of the sender's account.
+--help: DM's a command list to the sender.
+--weather <city>: Returns weather information for the specified city.
+--translate <string> <lang_code>: Translates the specified string with Yandex to the specified two-character language code (e.g. en, es NOT en-US, es-MX).
+--neocities <neocities_sitename>: Returns the Neocities (https://neocities.org/) website statistics of the specified Neocities site.
+
+--fortnite <fortnite_username> [pc|xbl|psn]: Returns the Fortnite statistics of the specified username on the specified platform (PC, XBOX Live, or PlayStation).
+
+--discordid: Returns the Discord ID of the sender's account.
 
 **ENTERTAINMENT**
---fight <discord_user>
-Runs a battle simulation between the sender and the specified user.
---win
-Returns the amount of battle wins (attained via --fight) associated with the sender's account.
---yt <search_phrase>
-Searches the specified search phrase on YouTube and returns the first search result.
+--fight <discord_user>: [BETA] Runs a battle simulation between the sender and the specified user.
+--win: Returns the amount of battle wins (attained via --fight) associated with the sender's account.
+--yt <search_phrase>: Searches the specified search phrase on YouTube and returns the first search result.
 
 **CURRENCY**
---createkatoms
-Registers the sender's account in the katom database, enabling them to earn/receive katoms. This must be done before running any katom-related commands.
---katoms
-Returns the number of katoms associated with the sender's account.
---generate
-[BETA] Generates a lottery ticket number and associates it with the sender's account, unless there is already a ticket number associated with the sender's account.
---ticket
-[BETA] Returns the ticket number, if existent, associated with the sender's account.
---lottery
-[BETA] After confirmation, runs the lottery, picks three winners, and clears all ticket numbers.
+--createkatoms: Registers the sender's account in the katom database, enabling them to earn/receive katoms. This must be done before running any katom-related commands.
+--katoms: Returns the number of katoms associated with the sender's account.
+--generate: [BETA] Generates a lottery ticket number and associates it with the sender's account, unless there is already a ticket number associated with the sender's account.
+--ticket: [BETA] Returns the ticket number, if existent, associated with the sender's account.
+--lottery: [BETA] After confirmation, runs the lottery, picks three winners, and clears all ticket numbers.
 
 **MISCELLANEOUS**
---hello
-Returns a generic greeting.
---dice <number_of_sides>
-Rolls a virtual die with the specified amount of sides (generates a random number between 1 and the specified number). Defaults to 6 if not specified.
---frick
-Stubs Karbon's toe.
+--hello: Returns a generic greeting.
+--dice <number_of_sides>: Rolls a virtual die with the specified amount of sides (generates a random number between 1 and the specified number). Defaults to 6 if not specified.
+--frick: Stubs Karbon's toe.
