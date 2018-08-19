@@ -4,8 +4,8 @@ const translate = process.env.translate;
 module.exports.run = async (bot, message, args) => {
     console.log("Fetch ready!");
     message.react("📚");
-    var word = args[0]
-    var language = args[1]
+    var language = args[0]
+    var phrase = args.join("").slice(1)
     fetch(`https://translate.yandex.net/api/v1.5/tr.json/translate?key=${translate}&text=${word}&lang=en-${language}`)
     .then(res => res.json())
     .then(data => {
