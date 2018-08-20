@@ -16,6 +16,7 @@ module.exports.run = async (bot, message, args) => {
     .setColor("#1eaefc")
     .addField("Time Zone", data.data[0].timezone)
     .addField("Temperature (Celcius)", data.data[0].temp)
+    .addField("Temperature (Fahrenheit)", data.data[0].temp * 1 * 1.8 + 32)
     .addField("Appearance", data.data[0].weather.description)
     .addField("Precipitation", `${data.data[0].precip}%`)
     .addField("Wind Direction", data.data[0].wind_cdir)
