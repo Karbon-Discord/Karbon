@@ -56,7 +56,7 @@ bot.on("message", (message) => {
     let cmd = messageArray[0];
     let args = messageArray.slice(1);
 
-    if(prefix !== "--") return '';
+    if(!message.content.startsWith(prefix)) return;
     let commandfile = bot.commands.get(cmd.slice(prefix.length));
     if(commandfile) commandfile.run(bot, message, args);
     
