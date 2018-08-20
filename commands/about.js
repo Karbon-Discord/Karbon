@@ -9,7 +9,7 @@ module.exports.run = async (bot, message, args) => {
   .setColor("#072b66")
   .setThumbnail(bicon)
   .addField("Name", bot.user.username)
-  .addField("Bot Image Created by Starline", "- Freepik.com")
+  .addField("Bot Image is All Rights Reserved from", "Lxi Inc.")
   .addField("Created", bot.user.createdAt)
   .addField("Servers", bot.guilds.size)
   .addField("Members", bot.users.size);
