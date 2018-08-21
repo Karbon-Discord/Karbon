@@ -7,14 +7,14 @@ module.exports.run = async (bot, message, args) => {
     katoms[message.author.id] = {
        katoms:100
     }
-        message.channel.send(`You have ${katoms[message.author.id].katoms} K-Atoms!`)
+        message.channel.send(`You have ${katoms[message.author.id].katoms} Katoms!`)
 
   }
   
   
   
   else {
-       message.channel.send(`You have ${katoms[message.author.id].katoms} K-Atoms!`)
+       message.channel.send(`You have ${katoms[message.author.id].katoms} Katoms!`)
     
   }    
 }
