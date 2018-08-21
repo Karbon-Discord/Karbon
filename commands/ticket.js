@@ -1,14 +1,14 @@
 const Discord = require("discord.js");
-let storage = require("../storage.json");
+let lotteryticket = require("../lotteryticket.json");
 
 module.exports.run = async (bot, message, args) => {
-  if(!storage[message.author.id].ticket) {
+  if(!lotteryticket[message.author.id].ticketid) {
     message.react("🤔"); 
-    return message.reply("**You do not have a lottery ticket! Feel free to generate one. | --generate");
+    return message.reply("**You do not have a lottery ticket! Feel free to generate one. | --generate**");
   }
   else {
     message.react("🎫")
-    return message.reply(`:ticket: | **Your ticket number is: ${storage[message.author.id].ticket}**`)
+    return message.reply(`:ticket: | **Your ticket number is: ${lotteryticket[message.author.id].ticketid}**`)
     
   }    
 
