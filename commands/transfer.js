@@ -15,7 +15,7 @@ if(!num) return errors.correctUsage(message, "--transfer [num. katoms]");
 else if(!katoms[message.author.id]) return errors.noKatoms(message);
 else{
   katoms[message.author.id].katoms -= num;
-  bankacc[message.author.id].katoms = bankacc[message.author.id].katoms += num;
+  bankacc[message.author.id].katoms += num;
   message.reply(`**Transfer Successful! You now have: ${katoms[message.author.id].katoms} Katoms, and your alt bank account has ${bankacc[message.author.id].katoms} Katoms!**`)
 }
 }
