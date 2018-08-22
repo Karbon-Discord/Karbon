@@ -1,3 +1,10 @@
 {
-    "prefix": "--"
+    "prefix": "--",
+    "red": "#f44b42",
+    "blue": "#41a6f4",
+    "green": "#32e55f",
+    "orange": "#ea8a35",
+    "pink": "#f441c1",
+    "purple": "#bb41f4",
+    "yellow": "#f1f441"
 }
