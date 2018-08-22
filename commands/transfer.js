@@ -22,13 +22,11 @@ else{
     if(err) console.log(err);
   })
   
-  var oof = bankacc[message.author.id].katoms;
-  
-  oof + parseInt(num)
-  fs.writeFile('../katoms2.json', JSON.stringify(katoms), err => {
+  var oof = bankacc[message.author.id].katoms + parseInt(num);
+    fs.writeFile('../katoms2.json', JSON.stringify(katoms), err => {
     if(err) console.log(err);
   })
-  message.reply(`**Transfer Successful! You now have: ${katoms[message.author.id].katoms} Katoms, and your alt bank account has ${bankacc[message.author.id].katoms} Katoms!**`)
+  message.reply(`**Transfer Successful! You now have: ${katoms[message.author.id].katoms} Katoms, and your alt bank account has ${oof} Katoms!**`)
 }
 }
 module.exports.help = {
