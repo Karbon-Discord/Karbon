@@ -27,3 +27,12 @@ module.exports.noPerms = (message, perm) => {
   .addField("Insufficent Perm", "--createkatoms");
   message.channel.send(embed);
 }
+
+module.exports.userNotFound = (message) => {
+  let embed = new Discord.RichEmbed()
+  .setAuthor(message.author.username)
+  .setTitle("*USER NOT FOUND**")
+  .setColor(config.blue)
+  .addField("Error", "You did not specify a user!");
+  message.channel.send(embed);
+}
