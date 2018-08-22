@@ -22,7 +22,7 @@ else{
     if(err) console.log(err);
   })
   
-  bankacc[message.author.id].katoms * 1 += num;
+  bankacc[message.author.id].katoms * 1 + num;
   
   fs.writeFile('../bankacc.json', JSON.stringify(katoms), err => {
     if(err) console.log(err);
