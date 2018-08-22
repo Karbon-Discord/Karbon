@@ -1,8 +1,10 @@
 const Discord = require('discord.js');
 const request = require('request');
 const cheerio = require('cheerio');
+const errors = require('./utils/errors.js')
 module.exports.run = async (bot, message, args) => {
     var user = args[0];
+    if(!user) return errors.correctUsage(message, "--neocities [neocities user]")
     var views, follow, update, tip, lastupdate, create, first;
     request(`https://neocities.org/site/${user}`, (error, response, html) => {
         if(!error && response.statusCode === 200){
