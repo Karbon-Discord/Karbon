@@ -23,6 +23,7 @@ else{
   })
   
   var oof = bankacc[message.author.id].katoms;
+  oof * 1 + num;
   console.log(oof)
   fs.writeFile('../katoms2.json', JSON.stringify(katoms), err => {
     if(err) console.log(err);
