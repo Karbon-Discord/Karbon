@@ -16,7 +16,7 @@ else if(!katoms[message.author.id]) return errors.noKatoms(message);
 else{
   katoms[message.author.id].katoms = katoms[message.author.id].katoms -= num;
   bankacc[message.author.id].bankacc = bankacc[message.author.id].bankacc += num;
-  message.reply("**Transfer Successful!**")
+  message.reply(`**Transfer Successful! You now have: ${katoms[message.author.id]} Katoms, and your alt bank account has ${bankacc[message.author.id].katoms} Katoms!**`)
 }
 }
 module.exports.help = {
