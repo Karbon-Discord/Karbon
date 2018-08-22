@@ -9,7 +9,7 @@ if(!bankacc[message.author.id]){
   bankacc[message.author.id] = {
     katoms:25
   }
-  fs.writeFile('../bankacc.json', JSON.stringify(katoms), err => {
+  fs.writeFile('../katoms2.json', JSON.stringify(katoms), err => {
     if(err) console.log(err);
   })
 }
@@ -24,7 +24,7 @@ else{
   
   var oof = bankacc[message.author.id].katoms;
   console.log(oof)
-  fs.writeFile('../bankacc.json', JSON.stringify(katoms), err => {
+  fs.writeFile('../katoms2.json', JSON.stringify(katoms), err => {
     if(err) console.log(err);
   })
   message.reply(`**Transfer Successful! You now have: ${katoms[message.author.id].katoms} Katoms, and your alt bank account has ${bankacc[message.author.id].katoms} Katoms!**`)
