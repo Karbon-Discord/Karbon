@@ -1,11 +1,11 @@
 const Discord = require('discord.js');
 const client = require('fortnite');
 const fortnite = new client(process.env.fortnite);
-
+const errors = require('./utils/errors.js')
 module.exports.run = async (bot, message, args) => {
       var username = args[0];
       var platform = args[1] || "pc";
-      if(!username) return message.reply("Please enter a username.")
+      if(!username) return errors.correctUsage(message, '--fortnite [username] [pc | xbl | psn]');
       
       let data = fortnite.user(username, platform)
       .then(data => {
