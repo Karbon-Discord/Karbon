@@ -2,14 +2,15 @@ const Discord = require('discord.js');
 const fs = require('fs');
 const ms = require('ms');
 let warns = require('../warnings.json');
-
+const errors = require('./utils/errors.js')
 module.exports.run = async (bot, message, args) => {
 message.react('⚠');
-if(!message.member.hasPermission("MANAGE_MEMBERS")) return message.reply("You cannot do that!");
+if(!message.member.hasPermission("MANAGE_MEMBERS")) return errors.noPerms(message, "MANAGE_MEMBERS");
 let wUser = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
-if(!wUser) return message.reply("**Couldn't find them!**");
+if(!wUser) return errors.userNotFound(message);
 if(wUser.hasPermission("MANAGE_MESSAGES")) return message.reply("**No, they are too cool to be warned.**");
 let reason = args.join(" ").slice(22);
+ if(!reason) return errors.correctUsage(message, "--warn [user] [reason]")
 
 if(!warns[wUser.id]) warns[wUser.id] = {
   warns: 0
