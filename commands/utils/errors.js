@@ -24,7 +24,7 @@ module.exports.noPerms = (message, perm) => {
   .setAuthor(message.author.username)
   .setTitle("**NO PERMS**")
   .setColor(config.red)
-  .addField("Insufficent Perm", "--createkatoms");
+  .addField("Insufficent Perm", perm);
   message.channel.send(embed);
 }
 
