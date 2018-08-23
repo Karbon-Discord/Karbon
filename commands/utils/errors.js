@@ -13,9 +13,9 @@ module.exports.correctUsage = (message, usage) => {
 module.exports.noKatoms = (message) => {
   let embed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
-  .setTitle("**YOU DO NOT HAVE A KATOMS DB**")
+  .setTitle("**YOU DO NOT HAVE A KATOMS DATABASE**")
   .setColor(config.orange)
-  .addField("Run this command", "--createkatoms");
+  .addField("Run this command", "--createkatoms OR --katoms");
   message.channel.send(embed);
 }
 
@@ -31,7 +31,7 @@ module.exports.noPerms = (message, perm) => {
 module.exports.userNotFound = (message) => {
   let embed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
-  .setTitle("*USER NOT FOUND**")
+  .setTitle("**USER NOT FOUND**")
   .setColor(config.blue)
   .addField("Error", "You did not specify a user!");
   message.channel.send(embed);
