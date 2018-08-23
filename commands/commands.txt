@@ -51,7 +51,8 @@ Returns the number of katoms associated with the sender's account.
 [BETA] Returns the ticket number, if existent, associated with the sender's account.
 --lottery
 [BETA] After confirmation, runs the lottery, picks three winners, and clears all ticket numbers.
-
+--transfer <katoms>
+Transfer Katoms to another "bank account" or storage.
 **MISCELLANEOUS**
 --hello
 Returns a generic greeting.
