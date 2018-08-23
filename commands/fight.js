@@ -2,6 +2,8 @@ const Discord = require('discord.js');
 const wins = require('../wins.json');
 const xp = require('../xp.json');
 const fs = require('fs');
+const errors = require('./utils/errors.js')
+
 module.exports.run = async (bot, message, args) => {
     if(!wins[message.author.id]){
         wins[message.author.id] = {
@@ -18,6 +20,7 @@ module.exports.run = async (bot, message, args) => {
     
     
     let user = message.mentions.users.first();
+    if(!user) errors.correctUsage(message, "--fight [mention a user to fight]")
 //    let lol = args[1] 
     if(!user) message.reply("Please specify a user.")
     else{
