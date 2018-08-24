@@ -21,7 +21,7 @@ module.exports.run = async (bot, message, args) => {
       return errors.noQuestion(message);
   } else {
       var rand = Math.floor(Math.random() * res.length);
-      message.edit(`${res[rand]}`);
+      message.channel.send(`${res[rand]}`);
   }
 }
 
