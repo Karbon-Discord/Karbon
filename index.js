@@ -3,6 +3,11 @@ const config = require('./botconfig.json');
 const token = process.env.token;
 const bot = new Discord.Client({disableEveryone:true});
 const fs = require("fs");
+const mongoose = require('mongoose');
+const yellow = config.yellow;
+mongoose.connect('')
+
+
 bot.commands = new Discord.Collection();
 
 fs.readdir('./commands', (err, files) => {
@@ -51,6 +56,8 @@ bot.on('guildMemberRemove', member => {
 });
 
 bot.on("message", (message) => {
+    let xpAdd = Math.floor(Math.random() * 30) + 5;
+    console.log(xpAdd);
     let prefix = config.prefix;
     let messageArray = message.content.split(" ");
     let cmd = messageArray[0];

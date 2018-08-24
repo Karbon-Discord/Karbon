@@ -9,16 +9,16 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "discord.js": "^11.3.2",
-    "fortnite": "^4.1.1",
-    "youtube-search": "^1.1.1",
-    "neocities": "^0.0.3",
     "cheerio": "^1.0.0-rc.2",
+    "discord.js": "^11.3.2",
+    "ffmpeg-binaries": "^4.0.0",
+    "fortnite": "^4.1.1",
+    "mongoose": "^5.2.9",
+    "ms": "^2.1.1",
+    "neocities": "^0.0.3",
+    "node-fetch": "^2.2.0",
+    "opusscript": "^0.0.6",
     "request": "^2.87.0",
-     "opusscript": "^0.0.6",
-     "ffmpeg-binaries": "^4.0.0",
-     "ms": "^2.1.1",
-     "mongoose":"^5.2.9",
-     "node-fetch":"^2.2.0"
+    "youtube-search": "^1.1.1"
   }
 }
