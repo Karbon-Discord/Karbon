@@ -5,6 +5,7 @@ module.exports.run = async (bot, message, args) => {
  var oof = Object.keys(xp);
  var arr = [];
  arr.push(oof);
+ console.log(arr);
     
 };
 
