@@ -56,8 +56,8 @@ bot.on('guildMemberRemove', member => {
 });
 
 bot.on("message", (message) => {
-    let xpAdd = Math.floor(Math.random() * 30) + 5;
-    console.log(xpAdd);
+    // let xpAdd = Math.floor(Math.random() * 30) + 5;
+    // console.log(xpAdd);
     let prefix = config.prefix;
     let messageArray = message.content.split(" ");
     let cmd = messageArray[0];
