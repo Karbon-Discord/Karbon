@@ -36,3 +36,7 @@ module.exports.userNotFound = (message) => {
   .addField("Error", "You did not specify a user!");
   message.channel.send(embed);
 }
+
+module.exports.noQuestion = (message) => {
+    message.channel.send("I need a question buddy!")
+}
