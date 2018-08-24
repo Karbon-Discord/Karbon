@@ -73,7 +73,7 @@ bot.on("message", (message) => {
 
     if(nxtlvl <= xp[message.author.id].xp){
         xp[message.author.id].level = curlvl + 1;
-        message.channel.send(`**Congrats, <@${message.channel.id}> on leveling up to level ${curlvl}!**`)
+        message.channel.send(`**Congrats, ${message.author} on leveling up to level ${curlvl}!**`)
        
     }
 

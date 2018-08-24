@@ -9,7 +9,7 @@ module.exports.run = async (bot, message, args) => {
         }
     }
 
-    message.channel.send(`:white_check_mark: | **Your level is: ${xp[message.author.id].level}!`)
+    message.channel.send(`:white_check_mark: | **Your level is: ${xp[message.author.id].level}!**`)
 
 }
 
