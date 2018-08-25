@@ -7,9 +7,6 @@ module.exports.run = async (bot, message, args) => {
     let pers = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
 
     var num = args[1];
-    if(!katoms[message.author.id]){
-        return errors.noKatoms(message);
-    }
 
     if(!katoms[pers.id]){
         katoms[pers.id] = {
