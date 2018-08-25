@@ -42,7 +42,7 @@ bot.on('guildMemberAdd', member => {
 });
 
 bot.on('guildMemberRemove', member => {
-    if(member.guild.id === "476141277411541012"){
+   // if(member.guild.id === "476141277411541012"){
 
     let embed = new Discord.RichEmbed()
       .setDescription(`:outbox_tray: **${member.user.tag}** has left the ship.`)
@@ -52,8 +52,8 @@ bot.on('guildMemberRemove', member => {
   
     .setThumbnail(`${member.guild.iconURL}`);
     bot.channels.find("name", "welcome-goodbye").send(embed);
-       }
-    else return
+      // }
+   // else return
 });
 
 bot.on("message", (message) => {
@@ -68,7 +68,7 @@ bot.on("message", (message) => {
 
     let curxp = xp[message.author.id].xp;
     let curlvl = xp[message.author.id].level;
-    let nxtlvl = xp[message.author.id].level * 300;
+    let nxtlvl = xp[message.author.id].level * 700;
     xp[message.author.id].xp = curxp + xpAdd;
 
     if(nxtlvl <= xp[message.author.id].xp){
@@ -81,9 +81,16 @@ bot.on("message", (message) => {
         if (err) console.log(err);
     })
 
+    let prefixes = JSON.parse(fs.readFileSync("../prefixes.json", "utf8"));
+    if(!prefixes[message.guild.id]){
+        prefixes[message.guild.id] = {
+            prefixes:config.prefix
+        }
+    }
 
 
-    let prefix = config.prefix;
+
+    let prefix = prefixes[message.guild.id].prefixes;
     let messageArray = message.content.split(" ");
     let cmd = messageArray[0];
     let args = messageArray.slice(1);

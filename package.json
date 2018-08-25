@@ -11,7 +11,6 @@
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
     "discord.js": "^11.3.2",
-    "ffmpeg-binaries": "^4.0.0",
     "fortnite": "^4.1.1",
     "mongoose": "^5.2.9",
     "ms": "^2.1.1",
