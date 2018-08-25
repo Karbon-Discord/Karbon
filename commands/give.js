@@ -22,5 +22,5 @@ module.exports.run = async (bot, message, args) => {
     katoms[pers.id].katoms = katoms[pers.id].katoms + parseInt(num);
 }
 module.exports.help = {
-  name: "transferback"
+  name: "give"
 }

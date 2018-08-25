@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const errors = require('./utils/errors.js');
+const prefix2 = require('../prefixes.json')
 const fs = require('fs');
 module.exports.run = async (bot, message, args) => {
     
@@ -16,6 +17,7 @@ module.exports.run = async (bot, message, args) => {
   fs.writeFile("../prefixes.json", JSON.stringify(prefixes), err => {
       if(err) console.log(err);
   })
+
 }
 
 
