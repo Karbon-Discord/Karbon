@@ -3,9 +3,10 @@ const katoms = require('../katoms.json');
 const errors = require('./utils/errors.js');
 const fs = require('fs');
 module.exports.run = async (bot, message, args) => {
-    if(!message.author.hasPermission("ADMINISTRATOR")) return message.reply("no");
-    var num = args[0];
-    var pers = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[1]);
+    if(!message.member.hasPermission("ADMINISTRATOR")) return message.reply("no");
+    let pers = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
+
+    var num = args[1];
     if(!katoms[message.author.id]){
         return errors.noKatoms(message);
     }
