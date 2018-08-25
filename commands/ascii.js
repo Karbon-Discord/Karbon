@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) => {
     fetch(`http://artii.herokuapp.com/make?text=${args.join(' ').slice(1)}`)
     .then(res => res.text)
     .then(data => {
-        message.channel.send(```
+        return message.channel.send(```
         ${data}
         ```)
     })    
