@@ -23,7 +23,7 @@ module.exports.run = async (bot, message, args) => {
     }
 
 
-    message.reply(`Successfully gave ${pers} ${num} Katoms!`)
+    message.reply(`Successfully gave ${user} ${num} Katoms!`)
 }
 module.exports.help = {
   name: "give"
