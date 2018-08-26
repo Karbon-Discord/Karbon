@@ -17,7 +17,7 @@ if(!katoms[message.author.id]){
 if(!num) return errors.correctUsage(message, "--transferback [num. katoms]");
 else if(!bankacc[message.author.id]) return errors.noKatoms(message);
 else{
-  var lol = bankacc[message.author.id].katoms -= parseInt(num);
+  var lol = bankacc[message.author.id].katoms - parseInt(num);
   fs.writeFile('../katoms2.json', JSON.stringify(katoms), err => {
     if(err) console.log(err);
   })
