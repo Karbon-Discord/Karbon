@@ -42,7 +42,7 @@ bot.on('guildMemberAdd', member => {
 });
 
 bot.on('guildMemberRemove', member => {
-   // if(member.guild.id === "476141277411541012"){
+    if(member.guild.id === "476141277411541012"){
 
     let embed = new Discord.RichEmbed()
       .setDescription(`:outbox_tray: **${member.user.tag}** has left the ship.`)
@@ -52,8 +52,8 @@ bot.on('guildMemberRemove', member => {
   
     .setThumbnail(`${member.guild.iconURL}`);
     bot.channels.find("name", "welcome-goodbye").send(embed);
-      // }
-   // else return
+       }
+    else return
 });
 
 bot.on("message", (message) => {
