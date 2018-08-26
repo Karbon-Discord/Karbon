@@ -9,9 +9,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "ascii-art": "^1.4.3",
     "cheerio": "^1.0.0-rc.2",
     "discord.js": "^11.3.2",
+    "figlet": "^1.2.0",
     "fortnite": "^4.1.1",
     "mongoose": "^5.2.9",
     "ms": "^2.1.1",
