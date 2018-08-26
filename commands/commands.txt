@@ -17,6 +17,8 @@ Kicks the specified user from the server with the specified reason.
 Warns the specified user with the specified reason. For convenience, the number of warnings is stored per user.
 --delete <number_of_messages>
 Deletes the specified number of messages.
+--give <user> <katoms>
+Gives katoms to a specified user without affecting the giver's balance.
 
 **INFORMATION**
 --help
@@ -39,6 +41,8 @@ Runs a battle simulation between the sender and the specified user.
 Returns the amount of battle wins (attained via --fight) associated with the sender's account.
 --yt <search_phrase>
 Searches the specified search phrase on YouTube and returns the first search result.
+--figlet <phrase>
+Turns the text to ASCII!
 
 **CURRENCY**
 --createkatoms
@@ -53,6 +57,9 @@ Returns the number of katoms associated with the sender's account.
 [BETA] After confirmation, runs the lottery, picks three winners, and clears all ticket numbers.
 --transfer <katoms>
 Transfer Katoms to another "bank account" or storage.
+--transferback <katoms>
+Transfer back Katoms to your main storage.
+
 **MISCELLANEOUS**
 --hello
 Returns a generic greeting.
