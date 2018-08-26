@@ -5,11 +5,10 @@ module.exports.run = async (bot, message, args) => {
  
     figlet(`${sentence}`, (err, data) => {
         if (err) {
-            console.log('Something went wrong...');
-            console.dir(err);
+            console.log(err);
             return;
         }
-        message.channel.sendCode(`${sentence}`)
+        message.channel.send(`${data}`)
     });
 
 }
