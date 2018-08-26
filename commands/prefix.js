@@ -5,7 +5,7 @@ const fs = require('fs');
 module.exports.run = async (bot, message, args) => {
     
   let prefix = args[0];
-  if(!message.member.hasPermission("MANAGE_SERVER")) return message.reply("no no no");
+  if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("no no no.");
   if(!prefix || prefix == "help") return errors.correctUsage(message, "--prefix [prefix]");
 
   let prefixes = JSON.parse(fs.readFileSync("../prefixes.json", "utf8"));
