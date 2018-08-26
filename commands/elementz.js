@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const figlet = require('figlet');
+const fetch = require('node-fetch')
 module.exports.run = async (bot, message, args) => {
     var sentence =  args[0]
     fetch(`https://elementz.neocities.org/${sentence}.txt`)
