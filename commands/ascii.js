@@ -9,7 +9,7 @@ module.exports.run = async (bot, message, args) => {
             console.dir(err);
             return;
         }
-        message.channel.sendCode(`${sentence}`, `xl`)
+        message.channel.sendCode(`${sentence}`)
     });
 
 }
