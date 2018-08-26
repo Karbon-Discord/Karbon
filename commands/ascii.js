@@ -1,12 +1,9 @@
 const Discord = require('discord.js');
-const fetch = require('node-fetch');
+const ascii = require('ascii-art');
 module.exports.run = async (bot, message, args) => {
     var sentence =  args.join(' ').slice(1)
-    fetch(`https://textart.io/figlet?text=${sentence}`)
-    .then(res => res.text)
-    .then(data => {
-        return message.channel.send(`${data}`)
-    })    
+    ascii.font(sentence);
+    message.channel.sendCode(`${sentence}`, 'xl')
 
 }
 
