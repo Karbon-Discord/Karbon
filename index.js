@@ -29,9 +29,9 @@ if (process.env.dblkey) {
     const DBL = require("dblapi.js");
     const dbl = new DBL(process.env.dblkey, bot);
     
-    dbl.postStats(client.guilds.size);
+    dbl.postStats(bot.guilds.size);
     setInterval(() => {
-        dbl.postStats(client.guilds.size);
+        dbl.postStats(bot.guilds.size);
     }, 1800000);
 
   } else {
