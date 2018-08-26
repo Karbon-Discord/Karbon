@@ -1,14 +1,13 @@
 const Discord = require('discord.js');
 const figlet = require('figlet');
 module.exports.run = async (bot, message, args) => {
-    var sentence =  args.join(' ').slice(1)
- 
-    figlet(`${sentence}`, (err, data) => {
+    args.slice()
+    figlet(args.join(" "), (err, data) => {
         if (err) {
             console.log(err);
             return;
         }
-        message.channel.send(`````${data}`````)
+        message.channel.send("```" + data + "```");
     });
 
 }
