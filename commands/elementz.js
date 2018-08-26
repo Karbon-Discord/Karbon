@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) => {
     fetch(`https://elementz.neocities.org/${sentence}.txt`)
     .then(res => res.text())
     .then(data => {
-        let factEmbed = Discord.RichEmbed()
+        let factEmbed = new Discord.RichEmbed()
         .setTitle(`**ELEMENT FACT FOR ATOMIC NUMBER ${sentence}**`)
         .addField("Fact", data);
         message.channel.send(factEmbed)
