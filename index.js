@@ -94,8 +94,9 @@ bot.on("message", (message) => {
     })
 
     let prefixes = JSON.parse(fs.readFileSync("./prefixes.json", "utf8"));
-    if(!prefixes[message.guild.id]){
-        prefixes[message.guild.id] = {
+    if(!prefixes[message.guild]){
+        
+        prefixes[message.guild] = {
             prefixes:config.prefix
         }
     }

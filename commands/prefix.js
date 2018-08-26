@@ -9,7 +9,7 @@ module.exports.run = async (bot, message, args) => {
 
   let prefixes = JSON.parse(fs.readFileSync("./prefixes.json", "utf8"));
   
-  prefixes[message.guild.id] = {
+  prefixes[message.guild] = {
       prefixes:args[0]
   }
 
@@ -17,7 +17,7 @@ module.exports.run = async (bot, message, args) => {
       if(err) console.log(err);
   })
 
-  message.channel.send("**::white_check_mark: | Successfully changed prefix!")
+  message.channel.send("**::white_check_mark: | Successfully changed prefix!**")
 }
 
 
