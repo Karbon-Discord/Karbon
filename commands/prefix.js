@@ -17,7 +17,7 @@ module.exports.run = async (bot, message, args) => {
       if(err) console.log(err);
   })
 
-  nessage.channel.send("**::white_check_mark: | Successfully changed prefix!")
+  message.channel.send("**::white_check_mark: | Successfully changed prefix!")
 }
 
 
