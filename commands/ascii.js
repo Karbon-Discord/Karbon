@@ -8,7 +8,7 @@ module.exports.run = async (bot, message, args) => {
             console.log(err);
             return;
         }
-        message.channel.send(`${data}`)
+        message.channel.send(`````${data}`````)
     });
 
 }
