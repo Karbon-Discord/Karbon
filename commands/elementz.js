@@ -8,6 +8,7 @@ module.exports.run = async (bot, message, args) => {
         let factEmbed = Discord.RichEmbed()
         .setTitle(`**ELEMENT FACT FOR ATOMIC NUMBER ${sentence}**`)
         .addField("Fact", data);
+        message.channel.send(factEmbed)
     })
 
 }
