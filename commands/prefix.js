@@ -8,14 +8,16 @@ module.exports.run = async (bot, message, args) => {
   if(!prefix || prefix == "help") return errors.correctUsage(message, "--prefix [prefix]");
 
   let prefixes = JSON.parse(fs.readFileSync("./prefixes.json", "utf8"));
+  
   prefixes[message.guild.id] = {
-      prefixes:prefix
+      prefixes:args[0]
   }
 
   fs.writeFile("../prefixes.json", JSON.stringify(prefixes), err => {
       if(err) console.log(err);
   })
 
+  nessage.channel.send("**::white_check_mark: | Successfully changed prefix!")
 }
 
 
