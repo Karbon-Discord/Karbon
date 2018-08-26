@@ -103,7 +103,7 @@ bot.on("message", (message) => {
 
 
 
-    let prefix = prefixes[message.guild.id].prefixes;
+    let prefix = prefixes[message.guild].prefixes;
     let messageArray = message.content.split(" ");
     let cmd = messageArray[0];
     let args = messageArray.slice(1);
