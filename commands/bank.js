@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const katoms = require('../katoms.json');
-const botconfig = require('./botconfig.json');
+const botconfig = require('../botconfig.json');
 const bankacc = require('../katoms2.json');
 const errors = require('./utils/errors.js');
 const fs = require('fs');
