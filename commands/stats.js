@@ -9,8 +9,8 @@ module.exports.run = async (bot, message, args) => {
     .setAuthor(message.author.id)
     .addField("Servers", bot.guilds.size)
     .addField("Members", bot.users.size)
-    .addField("Channels", bot.channels.size)
-    
+    .addField("Channels", bot.channels.size);
+    message.channel.send(embed)
 }
 
 module.exports.help = {
