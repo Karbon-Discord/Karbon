@@ -15,7 +15,7 @@ module.exports.noKatoms = (message) => {
   .setAuthor(message.author.username)
   .setTitle("**YOU DO NOT HAVE A KATOMS DATABASE**")
   .setColor(config.orange)
-  .addField("Run this command", botconfig.prefix + "createkatoms OR " + botconfig.prefix + "katoms");
+  .addField("Run this command", config.prefix + "createkatoms OR " + config.prefix + "katoms");
   message.channel.send(embed);
 }
 
