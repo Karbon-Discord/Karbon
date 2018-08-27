@@ -11,10 +11,6 @@ module.exports.run = async (bot, message, args) => {
   .addField("Name", bot.user.username)
   .addField("Bot Image is All Rights Reserved from", "Lxi Inc.")
   .addField("Created", bot.user.createdAt)
-  .addField("Servers", bot.guilds.size)
-  .addField("Members", bot.users.size);
-  
-  
   message.channel.send(botembed)
 
 }

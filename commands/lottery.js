@@ -87,7 +87,7 @@ else {  katoms[lol[firstplace]].katoms = katoms[`${lol[firstplace]}`].katoms += 
         message.channel.send(embed);
    
 
-        fs.writeFile('../lotteryticket.json', '', function(){console.log('done')})
+        fs.truncate('../lotteryticket.json', ticket.length, function(){console.log('done')})
 
   }
   
