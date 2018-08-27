@@ -86,6 +86,9 @@ else {  katoms[lol[firstplace]].katoms = katoms[`${lol[firstplace]}`].katoms += 
         .addField(`:money_with_wings: K-Atoms Earned`, `${num3}`);
         message.channel.send(embed);
    
+
+        fs.writeFile('../lotteryticket.json', '', function(){console.log('done')})
+
   }
   
   else if(response.content === "no") return message.reply(":x: | **Lottery Canceled**")
