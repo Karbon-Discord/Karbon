@@ -14,7 +14,7 @@ if (args[0] == "withdraw") {
     if(err) console.log(err);
   })
 }
-
+const num = args[1];
 if(!num) return errors.correctUsage(message, botconfig.prefix + "bank withdraw [num. katoms]");
 else if(!bankacc[message.author.id]) return errors.noKatoms(message);
 else{
