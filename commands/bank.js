@@ -43,6 +43,8 @@ if(!bankacc[message.author.id]){
 
 if(!num) return errors.correctUsage(message, botconfig.prefix + "bank deposit [num. katoms]");
 else if(!katoms[message.author.id]) return errors.noKatoms(message);
+  
+  else if(!args[0]) return errors.correctUsage(message, botconfig.prefix + "bank [deposit | withdraw] [num. katoms]")
 else{
   katoms[message.author.id].katoms -= num;
   fs.writeFile('../katoms.json', JSON.stringify(katoms), err => {
