@@ -22,12 +22,18 @@ module.exports.run = async (bot, message, args) => {
               create = arr[5]
             
       });
-        $('.news-item.comment').each(index => {
-            var arr2 = [];
-            arr2.push($(this).text());
-            first = arr2[0];
-            console.log(arr2)
-        })
+       
+      var feed = [];
+      $(":not(.comments) > .news-item.comment").each(function(index) {
+          if ($(this).html().indexOf('<i class="fa fa-chevron-right comment-symbol" title="commented on"></i>') > -1) {
+
+          } else {
+              feed.push($(this).find('.content').text().trim().split('\n')[0]);
+          }
+          console.log(feed)
+      });
+
+      arr.push(feed);
  let embed = new Discord.RichEmbed()
         .setTitle(`Neocities stats for ${user}`)
         .setDescription(`Amazing quote: ***${first}***`)
