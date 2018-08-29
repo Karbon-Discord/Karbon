@@ -19,7 +19,7 @@ network.train(trainingData, {
   iterations: 3000
 });
 
-const res = network.run(obj);
+const res = network.run('water');
 
 console.log(`Category: ${res}`);
 };
