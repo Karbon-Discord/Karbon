@@ -22,7 +22,7 @@ module.exports.run = async (bot, message, args) => {
               create = arr[5]
             
       });
-       
+       //Shoutout to dotcomboom btw
       var feed = [];
       $(":not(.comments) > .news-item.comment").each(function(index) {
           if ($(this).html().indexOf('<i class="fa fa-chevron-right comment-symbol" title="commented on"></i>') > -1) {
