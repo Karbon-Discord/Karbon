@@ -31,12 +31,13 @@ module.exports.run = async (bot, message, args) => {
               feed.push($(this).find('.content').text().trim().split('\n')[0]);
           }
           console.log(feed)
+          var cmt = feed[0];
       });
 
       arr.push(feed);
  let embed = new Discord.RichEmbed()
         .setTitle(`Neocities stats for ${user}`)
-        .setDescription(`Amazing quote: ***${first}***`)
+        .setDescription(`Amazing quote: ***${cmt}***`)
         .setColor("#42f4d7")
         .addField(":eyes: Views", views, true)
         .addField(":dolphin: Followers", follow, true)
