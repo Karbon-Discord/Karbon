@@ -71,3 +71,5 @@ Rolls a virtual die with the specified amount of sides (generates a random numbe
 Stubs Karbon's toe.
 --elementz [atomic-number]
 Gives a fact about the requested element of the periodic table.
+--category <word> [BETA]
+Uses Machine Learning to figure out which category the word belongs in: programming, object, subject, or animal.
