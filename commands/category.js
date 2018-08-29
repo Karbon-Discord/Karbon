@@ -6,8 +6,13 @@ module.exports.run = async (bot, message, args) => {
     var user = args.join(' ');
     if(!user) return errors.correctUsage(message, "--category [word or phrase]")
     
-    const network = new brain.recurrent.LSTM();
-    network.train(data, {
+    var network = new brain.recurrent.LSTM();
+    // const trainingData = data.map(item => ({
+    // input: item.text,
+    // output: item.category
+    // }));
+
+    network.train([{"text":"dog","category":"animal"},{"text":"cat","category":"animal"},{"text":"human","category":"animal"},{"text":"bird","category":"animal"},{"text":"deer","category":"animal"},{"text":"tiger","category":"animal"},{"text":"lion","category":"animal"},{"text":"fish","category":"animal"},{"text":"javascript","category":"programming"},{"text":"c#","category":"programming"},{"text":"python","category":"programming"},{"text":"c++","category":"programming"},{"text":"java","category":"programming"},{"text":"ball","category":"object"},{"text":"headphones","category":"object"},{"text":"watch","category":"object"},{"text":"bed","category":"object"},{"text":"desk","category":"object"},{"text":"pillow","category":"object"},{"text":"blanket","category":"object"},{"text":"cup","category":"object"},{"text":"plate","category":"object"},{"text":"shoe","category":"object"},{"text":"shirt","category":"object"},{"text":"pe","category":"subject"},{"text":"science","category":"subject"},{"text":"history","category":"subject"},{"text":"english","category":"subject"},{"text":"math","category":"subject"},{"text":"physics","category":"topic"},{"text":"chemistry","category":"topic"},{"text":"algebra","category":"topic"},{"text":"geometry","category":"topic"},{"text":"statistics","category":"topic"},{"text":"probability","category":"topic"},{"text":"trigonometry","category":"topic"},{"text":"biology","category":"topic"},{"text":"calculus","category":"topic"},{"text":"water","category":"drink"},{"text":"water","category":"drink"},{"text":"juice","category":"drink"},{"text":"gatorade","category":"drink"},{"text":"tea","category":"drink"},{"text":"lemonade","category":"drink"},{"text":"coke","category":"soda"},{"text":"sprite","category":"soda"},{"text":"pepsi","category":"soda"},{"text":"fanta","category":"soda"},{"text":"mountain dew","category":"soda"},{"text":"San Francisco","category":"place"},{"text":"Los Angeles","category":"place"},{"text":"Portland","category":"place"},{"text":"Seattle","category":"place"},{"text":"Las Vegas","category":"place"},{"text":"Minneapolis","category":"place"},{"text":"Detroit","category":"place"},{"text":"Cleveland","category":"place"},{"text":"District of Columbia","category":"place"},{"text":"New York","category":"place"},{"text":"Orlando","category":"place"},{"text":"Miami","category":"place"},{"text":"Atlanta","category":"place"},{"text":"Philadelphia","category":"place"},{"text":"Beijing","category":"place"},{"text":"New Delhi","category":"place"},{"text":"Moscow","category":"place"},{"text":"Guangzhou","category":"place"},{"text":"Mumbai","category":"place"},{"text":"Istanbul","category":"place"},{"text":"Shanghai","category":"place"}], {
     iterations: 3000
     });
 
