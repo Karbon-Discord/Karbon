@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const brain = require('brain.js');
-const data = require('./brain.json');
+const data = require('../brain.json');
 
 module.exports.run = async (bot, message, args) => {
 var obj = args.join(' ');
