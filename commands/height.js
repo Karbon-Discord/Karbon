@@ -15,3 +15,7 @@ module.exports.run = async (bot, message, args) => {
         message.channel.send(`:white_check_mark: | ** NUMBER OF FEET: ${conversion} feet**`)
     }
 }
+
+module.exports.help = {
+    name: "height"
+}
