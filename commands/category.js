@@ -6,20 +6,20 @@ module.exports.run = async (bot, message, args) => {
     var user = args.join(' ');
     if(!user) return errors.correctUsage(message, "--category [word or phrase]")
     
-    const network = new brain.recurrent.LSTM();
+const network = new brain.recurrent.LSTM();
 
-    const trainingData = data.map(item => ({
-    input: item.text,
-    output: item.category
-    }));
+   
+const trainingData = data.map(item => ({
+  input: item.text,
+  output: item.category
+}));
+   
+network.train(trainingData, {
+  iterations: 2000
+});
 
-    network.train(trainingData, {
-    iterations: 3000
-    });
-
-    const output = network.run('water');
-
-    console.log(`Category: ${output}`);
+const output = network.run('water');
+console.log(output)
 };
 
 module.exports.help = {
