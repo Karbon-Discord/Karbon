@@ -7,13 +7,7 @@ module.exports.run = async (bot, message, args) => {
     if(!user) return errors.correctUsage(message, "--category [word or phrase]")
     
     const network = new brain.recurrent.LSTM();
-
-    const trainingData = data.map(item => ({
-    input: item.text,
-    output: item.category
-    }));
-
-    network.train(trainingData, {
+    network.train(data, {
     iterations: 3000
     });
 
