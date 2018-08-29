@@ -26,6 +26,7 @@ module.exports.run = async (bot, message, args) => {
             var arr2 = [];
             arr2.push($(this).text().trim());
             first = arr2[0];
+            console.log(arr2)
         })
  let embed = new Discord.RichEmbed()
         .setTitle(`Neocities stats for ${user}`)

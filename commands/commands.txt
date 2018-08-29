@@ -33,6 +33,8 @@ Returns the Neocities (https://neocities.org/) website statistics of the specifi
 Returns the Fortnite statistics of the specified username on the specified platform (PC, XBOX Live, or PlayStation).
 --discordid
 Returns the Discord ID of the sender's account.
+--height [fti | itf] [number]
+
 
 **ENTERTAINMENT**
 --fight <discord_user>
