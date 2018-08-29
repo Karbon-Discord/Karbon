@@ -1,31 +1,27 @@
 const Discord = require('discord.js');
 const brain = require('brain.js');
-const data = require('./brain.json');
+const data = require('./data.json');
 const errors = require('./utils/errors.js')
-
 module.exports.run = async (bot, message, args) => {
+    var user = args.join(' ');
+    if(!user) return errors.correctUsage(message, "--category [word or phrase]")
+    
+    const network = new brain.recurrent.LSTM();
 
- var obj = args.join(' ');
- if(!obj) return errors.correctUsage(message, "--category [word | phrase]");
+    const trainingData = data.map(item => ({
+    input: item.text,
+    output: item.category
+    }));
 
- const network = new brain.recurrent.LSTM();
+    network.train(trainingData, {
+    iterations: 3000
+    });
 
-const trainingData = data.map(item => ({
-  input: item.text,
-  output: item.category
-}));
+    const output = network.run('water');
 
-network.train(trainingData, {
-  iterations: 3000
-});
-
-const res = network.run('water');
-
-console.log(`Category: ${res}`);
+    console.log(`Category: ${output}`);
 };
 
 module.exports.help = {
   name: "category"
 }
-
-
