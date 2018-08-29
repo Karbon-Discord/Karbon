@@ -22,9 +22,9 @@ module.exports.run = async (bot, message, args) => {
               create = arr[5]
             
       });
-        $('.comment .content').each(index => {
+        $(':not(.comments) > .news-item.comment').each(index => {
             var arr2 = [];
-            arr2.push($(this).text().trim());
+            arr2.push($(this).find('.content').text());
             first = arr2[0];
             console.log(arr2)
         })
