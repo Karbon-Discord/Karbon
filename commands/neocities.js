@@ -31,10 +31,11 @@ module.exports.run = async (bot, message, args) => {
               feed.push($(this).find('.content').text().trim().split('\n')[0]);
           }
           console.log(feed)
-          var cmt = feed[0];
       });
 
-      arr.push(feed);
+      arr.push(feed);      
+          var cmt = feed[0];
+
  let embed = new Discord.RichEmbed()
         .setTitle(`Neocities stats for ${user}`)
         .setDescription(`Amazing quote: ***${cmt}***`)
