@@ -6,7 +6,6 @@ module.exports.run = async (bot, message, args) => {
    // var user = args.join(' ');
     //if(!user) return errors.correctUsage(message, "--category [word or phrase]")
     
-    var network = new brain.recurrent.LSTM();
     var net = new brain.recurrent.LSTM();
 
     net.train([
