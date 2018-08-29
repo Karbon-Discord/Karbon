@@ -2,7 +2,6 @@ const Discord = require('discord.js');
 const brain = require('brain.js');
 const data = require('./brain.json');
 const errors = require('./utils/errors.js')
-const network = new brain.recurrent.LSTM();
 
 module.exports.run = async (bot, message, args) => {
 
