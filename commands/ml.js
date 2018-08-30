@@ -9,7 +9,7 @@ module.exports.run = async (bot, message, args) => {
         { input: "Lemonade", output: "Drink" }
     ])
     const output = network.run("Mango Juice");
-    console.log(`Prob: ${output}`);
+    message.reply(`Prob: ${output}`);
 
 }
 module.exports.help = {
