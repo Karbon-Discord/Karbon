@@ -32,13 +32,8 @@ const network = new brain.recurrent.LSTM();
         { input: ["Wizards", "Lakers"], output: [0] },
         { input: ["Warriors", "Raptors"], output: [0] },
     ])
-
     const output = network.run(["Warriors", "Lakers"]);
-
     console.log(`Category: ${output}`);
-    
-}
-
 
 if (process.env.dblkey) {
     const DBL = require("dblapi.js");
