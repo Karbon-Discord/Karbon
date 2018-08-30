@@ -35,6 +35,7 @@ let msg = await message.channel.send(":warning: | **CONFIRMATION: Are you sure y
 }
 else if(response.content === "no") return message.reply(":x: | ** Will not run the script. **")
 
+})
 }
 module.exports.help = {
   name: "whichcategory"
