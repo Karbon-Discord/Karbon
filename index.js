@@ -24,6 +24,20 @@ fs.readdir('./commands', (err, files) => {
 })
 bot.on('ready', () => {
     bot.user.setActivity(`in ${bot.guilds.size} servers`);
+const network = new brain.recurrent.LSTM();
+    network.train([
+        { input: ["Warriors", "Thunder"], output: [0] },
+        { input: ["Thunder", "Lakers"], output: [1] },
+        { input: ["Cavaliers", "Wizards"], output: [1] },
+        { input: ["Wizards", "Lakers"], output: [0] },
+        { input: ["Warriors", "Raptors"], output: [0] },
+    ])
+
+    const output = network.run(["Warriors", "Lakers"]);
+
+    console.log(`Category: ${output}`);
+    
+}
 
 
 if (process.env.dblkey) {
