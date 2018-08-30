@@ -7,7 +7,11 @@ module.exports.run = async (bot, message, args) => {
     network.train([
         { input: "Water", output: "Drink" },
         { input: "Juice", output: "Drink" },
-        { input: "Lemonade", output: "Drink" }
+        { input: "Lemonade", output: "Drink" },
+         { input: "Coke", output: "Drink" },
+        { input: "Sprite", output: "Drink" },
+             { input: "Fanta", output: "Drink" },
+
     ])
   console.log(phrase);
     const output = network.run(`${phrase}`);
