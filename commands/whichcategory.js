@@ -9,10 +9,10 @@ module.exports.run = async (bot, message, args) => {
 
   const network = new brain.recurrent.LSTM();
  network.train([
-        { input: "Water", output: "Drink" },
-        { input: "Juice", output: "Drink" },
-        { input: "Lemonade", output: "Drink" },
-         { input: "Coke", output: "Drink" },
+        { input: "water", output: "Drink" },
+        { input: "juice", output: "Drink" },
+        { input: "lemonade", output: "Drink" },
+         { input: "coke", output: "Drink" },
 
         { input: "Los Angeles", output: "Place" },
            { input: "New Delhi", output: "Place" },
