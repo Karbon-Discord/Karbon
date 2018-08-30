@@ -4,6 +4,8 @@ const brain = require('brain.js');
 module.exports.run = async (bot, message, args) => {
 
   const phrase = args.join(' ');
+    console.log(phrase);
+
     message.channel.send("**THINKING** Please note this will take up to 2-3 minutes.")
   const network = new brain.recurrent.LSTM();
     network.train([
@@ -33,7 +35,6 @@ module.exports.run = async (bot, message, args) => {
                  { input: "9", output: "Number" },
 
     ])
-  console.log(phrase);
     const output = network.run(`${phrase}`);
     message.reply(`Prob: ${output}`);
     if(output !== "Drink" || output !== "Place" || output !== "Number") return message.reply("**Looks like this word doesn't come under a drink or a soda!**")
