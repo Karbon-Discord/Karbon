@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const brain = require('brain.js');
 
 module.exports.run = async (bot, message, args) => {
-  const phrase = args[0];
+  const phrase = args.join(' ');
   const network = new brain.recurrent.LSTM();
     network.train([
         { input: "Water", output: "Drink" },
