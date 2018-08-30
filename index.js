@@ -24,16 +24,14 @@ fs.readdir('./commands', (err, files) => {
 })
 bot.on('ready', () => {
     bot.user.setActivity(`in ${bot.guilds.size} servers`);
-const network = new brain.recurrent.LSTM();
+const network = new brain.NeuralNetwork();
     network.train([
-        { input: ["Warriors", "Thunder"], output: [0] },
-        { input: ["Thunder", "Lakers"], output: [1] },
-        { input: ["Cavaliers", "Wizards"], output: [1] },
-        { input: ["Wizards", "Lakers"], output: [0] },
-        { input: ["Warriors", "Raptors"], output: [0] },
+        { input: [0, 0, 0], output: [1] },
+        { input: [0, 1, 1], output: [1] },
+        { input: [1, 0, 1], output: [1] }
     ])
-    const output = network.run(["Warriors", "Lakers"]);
-    console.log(`Category: ${output}`);
+    const output = network.run([1, 0, 1]);
+    console.log(`Prob: ${output}`);
 
 if (process.env.dblkey) {
     const DBL = require("dblapi.js");
