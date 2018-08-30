@@ -24,13 +24,13 @@ fs.readdir('./commands', (err, files) => {
 })
 bot.on('ready', () => {
     bot.user.setActivity(`in ${bot.guilds.size} servers`);
-const network = new brain.NeuralNetwork();
+const network = new brain.recurrent.LSTM();
     network.train([
-        { input: [0, 0, 0], output: [1] },
-        { input: [0, 1, 1], output: [1] },
-        { input: [1, 0, 1], output: [1] }
+        { input: "Water", output: "Drink" },
+        { input: "Juice", output: "Drink" },
+        { input: "Lemonade", output: "Drink" }
     ])
-    const output = network.run([1, 0, 1]);
+    const output = network.run("Mango Juice");
     console.log(`Prob: ${output}`);
 
 if (process.env.dblkey) {
