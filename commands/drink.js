@@ -9,7 +9,8 @@ module.exports.run = async (bot, message, args) => {
         { input: "Juice", output: "Drink" },
         { input: "Lemonade", output: "Drink" }
     ])
-    const output = network.run("coke");
+  console.log(phrase);
+    const output = network.run(`${phrase}`);
     message.reply(`Prob: ${output}`);
     if(output === "") return message.reply("**Looks like this word doesn't come under a drink or a soda!**")
 
