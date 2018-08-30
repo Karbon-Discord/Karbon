@@ -13,13 +13,8 @@ module.exports.run = async (bot, message, args) => {
         { input: "Juice", output: "Drink" },
         { input: "Lemonade", output: "Drink" },
          { input: "Coke", output: "Drink" },
-        { input: "Sprite", output: "Drink" },
-         { input: "Fanta", output: "Drink" },
+
         { input: "Los Angeles", output: "Place" },
-        { input: "San Francisco", output: "Place" },
-           { input: "Portland", output: "Place" },
-           { input: "Toronto", output: "Place" },
-           { input: "Boston", output: "Place" },
            { input: "New Delhi", output: "Place" },
            { input: "Lahore", output: "Place" },
            { input: "Seoul", output: "Place" },
@@ -27,12 +22,6 @@ module.exports.run = async (bot, message, args) => {
            { input: "1", output: "Number" },
                  { input: "2", output: "Number" },
                  { input: "3", output: "Number" },
-                 { input: "4", output: "Number" },
-                 { input: "5", output: "Number" },
-                 { input: "6", output: "Number" },
-                 { input: "7", output: "Number" },
-                 { input: "8", output: "Number" },
-                 { input: "9", output: "Number" },
 
     ])
 
