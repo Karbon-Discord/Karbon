@@ -34,7 +34,7 @@ let msg = await message.channel.send(":warning: | **CONFIRMATION: Are you sure y
     message.reply(`Category: ${output}`);
 //   }
   
-  else if(response.content === "no") return message.reply(":x: | ** Will not run the script. **")
+//  else if(response.content === "no") return message.reply(":x: | ** Will not run the script. **")
 //  })
 };
 }
