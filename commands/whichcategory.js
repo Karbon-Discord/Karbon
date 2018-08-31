@@ -32,7 +32,6 @@ let msg = await message.channel.send(":warning: | **CONFIRMATION: Are you sure y
     const output = network.run(`${phrase}`);
     message.reply(`Category: ${output}`);
     }
-}
 else if(response.content === "no") return message.reply(":x: | ** Will not run the script. **")
 
 })
@@ -40,3 +39,5 @@ else if(response.content === "no") return message.reply(":x: | ** Will not run t
 module.exports.help = {
   name: "whichcategory"
 }
+
+
