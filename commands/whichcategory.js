@@ -6,9 +6,9 @@ module.exports.run = async (bot, message, args) => {
   const phrase = args.join(' ');
     if(phrase) {
 let msg = await message.channel.send(":warning: | **CONFIRMATION: Are you sure you want to run the which category script? This will make the bot go offline for 5-10 minutes.**");
- const res = await message.channel.awaitMessages(response => {
-  response.content === "yes" || response.content === "no"
-  if(response.content === "yes"){
+ //const res = await message.channel.awaitMessages(response => {
+//   response.content === "yes" || response.content === "no"
+//   if(response.content === "yes"){
   console.log(phrase);
     bot.user.setActivity(`with information ${message.author.username} gave me...`);
     bot.user.setStatus(`dnd`);
@@ -32,10 +32,10 @@ let msg = await message.channel.send(":warning: | **CONFIRMATION: Are you sure y
   
     const output = network.run(`${phrase}`);
     message.reply(`Category: ${output}`);
-  }
+//   }
   
   else if(response.content === "no") return message.reply(":x: | ** Will not run the script. **")
- })
+//  })
 };
 }
 
