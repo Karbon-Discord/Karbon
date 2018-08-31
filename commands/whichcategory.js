@@ -9,7 +9,7 @@ let msg = await message.channel.send(":warning: | **CONFIRMATION: Are you sure y
  const res = await message.channel.awaitMessages(response => {
   response.content === "yes" || response.content === "no"
   if(response.content === "yes"){
-    console.log(phrase);
+  console.log(phrase);
 
   const network = new brain.recurrent.LSTM();
  network.train([
@@ -31,13 +31,16 @@ let msg = await message.channel.send(":warning: | **CONFIRMATION: Are you sure y
   
     const output = network.run(`${phrase}`);
     message.reply(`Category: ${output}`);
-    }
-else if(response.content === "no") return message.reply(":x: | ** Will not run the script. **")
+  }
+  
+  else if(response.content === "no") return message.reply(":x: | ** Will not run the script. **")
+ })
+};
 
-})
-}
 module.exports.help = {
   name: "whichcategory"
 }
 
 
+
+  
