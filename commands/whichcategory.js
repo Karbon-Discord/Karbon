@@ -10,7 +10,8 @@ let msg = await message.channel.send(":warning: | **CONFIRMATION: Are you sure y
   response.content === "yes" || response.content === "no"
   if(response.content === "yes"){
   console.log(phrase);
-
+    bot.user.setActivity(`with information ${message.author.username} gave me...`);
+    bot.user.setStatus(`dnd`);
   const network = new brain.recurrent.LSTM();
  network.train([
         { input: "water", output: "Drink" },
