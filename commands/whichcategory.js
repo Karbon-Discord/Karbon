@@ -28,7 +28,7 @@ let msg = await message.channel.send(":warning: | **CONFIRMATION: Are you sure y
                  { input: "3", output: "Number" },
 
     ])
-  }
+  
     const output = network.run(`${phrase}`);
     message.reply(`Category: ${output}`);
     }
