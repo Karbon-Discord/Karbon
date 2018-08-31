@@ -4,7 +4,9 @@ const brain = require('brain.js');
 module.exports.run = async (bot, message, args) => {
 
   const phrase = args.join(' ');
+  if(!message.author.hasPermission("ADMINISTRATOR")) return message.reply("no no no.")
     if(phrase) {
+      
 let msg = await message.channel.send(":warning: | **CONFIRMATION: Are you sure you want to run the which category script? This will make the bot go offline for 5-10 minutes.**");
  //const res = await message.channel.awaitMessages(response => {
 //   response.content === "yes" || response.content === "no"
