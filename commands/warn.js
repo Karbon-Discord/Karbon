@@ -5,7 +5,7 @@ let warns = require('../warnings.json');
 const errors = require('./utils/errors.js')
 module.exports.run = async (bot, message, args) => {
 message.react('⚠');
-if(!message.member.hasPermission("MANAGE_MEMBERS")) return errors.noPerms(message, "MANAGE_MEMBERS");
+if(!message.member.hasPermission("MANAGE_MESSAGES")) return errors.noPerms(message, "MANAGE_MESSAGES");
 let wUser = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
 if(!wUser) return errors.userNotFound(message);
 if(wUser.hasPermission("MANAGE_MESSAGES")) return message.reply("**No, they are too cool to be warned.**");
