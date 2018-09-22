@@ -11,7 +11,7 @@
   "dependencies": {
     "brain.js": "^1.2.6",
     "cheerio": "^1.0.0-rc.2",
-    "dblapi.js": "^2.2.0",
+    "dbl-api": "^1.2.1",
     "discord.js": "^11.3.2",
     "figlet": "^1.2.0",
     "fortnite": "^4.1.1",
