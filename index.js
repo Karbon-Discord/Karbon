@@ -25,18 +25,18 @@ fs.readdir('./commands', (err, files) => {
 bot.on('ready', () => {
     bot.user.setActivity(`in ${bot.guilds.size} servers`);
 
-// if (process.env.dblkey) {
-//     const DBL = require("dblapi.js");
-//     const dbl = new DBL(process.env.dblkey, bot);
+if (process.env.dblkey) {
+    const DBL = require("dblapi.js");
+    const dbl = new DBL(process.env.dblkey, bot);
     
-//     dbl.postStats(bot.guilds.size);
-//     setInterval(() => {
-//         dbl.postStats(bot.guilds.size);
-//     }, 1800000);
+    dbl.postStats(bot.guilds.size);
+    setInterval(() => {
+        dbl.postStats(bot.guilds.size);
+    }, 1800000);
 
-//   } else {
-//     console.log('Discord Bot List token (dbltoken) was not found in .env! Server counts will not be sent to Discord Bot List.')
-//   }
+  } else {
+    console.log('Discord Bot List token (dbltoken) was not found in .env! Server counts will not be sent to Discord Bot List.')
+  }
 })
 bot.on('guildMemberAdd', member => {
      if(member.guild.id === "476141277411541012"){
