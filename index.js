@@ -26,7 +26,7 @@ bot.on('ready', () => {
     bot.user.setActivity(`in ${bot.guilds.size} servers`);
 
 if (process.env.dblkey) {
-    const DBL = require("dblapi.js");
+    const DBL = require("dbl-api");
     const dbl = new DBL(process.env.dblkey, bot);
     
     dbl.postStats(bot.guilds.size);
