@@ -23,7 +23,7 @@ fs.readdir('./commands', (err, files) => {
 
 })
 bot.on('ready', () => {
-    bot.user.setActivity(`in ${bot.guilds.size} servers`);
+    bot.user.setActivity(`in ${bot.guilds.size} servers and with ${bot.guilds.members} people`);
 
 if (process.env.dblkey) {
     const DBL = require("dblapi.js");
