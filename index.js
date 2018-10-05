@@ -67,6 +67,9 @@ bot.on('guildMemberRemove', member => {
        }
     else return
 });
+bot.on("guildCreate", guild => {
+	    bot.channels.find("id", "478309556330430464").send("Someone added my test bot, server named: " + guild.name + " and their name was: " + guild.owner.user.username);
+});
 
 bot.on("message", (message) => {
     let xpAdd = Math.floor(Math.random() * 30) + 5;
