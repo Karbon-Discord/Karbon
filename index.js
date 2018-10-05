@@ -68,7 +68,15 @@ bot.on('guildMemberRemove', member => {
     else return
 });
 bot.on("guildCreate", guild => {
-	    bot.channels.find("id", "478309556330430464").send("Someone added my test bot, server named: " + guild.name + " and their name was: " + guild.owner.user.username);
+	 let embed = new Discord.RichEmbed()
+      .setDescription(`:inbox: **WE GOTTA NEW SERVER IN THE HOUSE**`)
+      .addField("Server Name:", guild.name)
+      .addField("Who Added Me?:", guild.owner.user.username)
+      .setFooter("User Left | Karbon's Lounge", member.user.displayAvatarURL)
+       
+     .setColor("#f44262")
+  
+    .setThumbnail(`${member.guild.iconURL}`);
 });
 
 bot.on("message", (message) => {
