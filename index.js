@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const config = require('./botconfig.json');
 const token = process.env.token;
-const bot = new Discord.Client({disableEveryone:true});
+const bot = new Discord.Client({disableEveryone: true});
 const fs = require("fs");
 const mongoose = require('mongoose');
 const yellow = config.yellow;
@@ -79,37 +79,35 @@ bot.on("guildCreate", guild => {
     .setThumbnail(`${member.guild.iconURL}`);
 });
 
-bot.on("message", (message) => {
+bot.on("message", message => {
     let xpAdd = Math.floor(Math.random() * 30) + 5;
     console.log(xpAdd);
-    // if(!xp[message.author.id]){
-    //     xp[message.author.id] = {
-    //         level:1,
-    //         xp:0
-    //     }
-    // }
+    /*if(!xp[message.author.id]){
+         xp[message.author.id] = {
+             level:1,
+             xp:0
+         }
+     }
+    let curxp = xp[message.author.id].xp;
+    let curlvl = xp[message.author.id].level;
+    let nxtlvl = xp[message.author.id].level * 700;
+    xp[message.author.id].xp = curxp + xpAdd;
 
-    // let curxp = xp[message.author.id].xp;
-    // let curlvl = xp[message.author.id].level;
-    // let nxtlvl = xp[message.author.id].level * 700;
-    // xp[message.author.id].xp = curxp + xpAdd;
-
-    // if(nxtlvl <= xp[message.author.id].xp){
-    //     xp[message.author.id].level = curlvl + 1;
-    //     message.channel.send(`**Congrats, ${message.author} on leveling up to level ${curlvl}!**`)
+    if(nxtlvl <= xp[message.author.id].xp){
+        xp[message.author.id].level = curlvl + 1;
+        message.channel.send(`**Congrats, ${message.author} on leveling up to level ${curlvl}!**`)
        
-    // }
+    }
 
-    // fs.writeFile('./xp.json', JSON.stringify(xp), err => {
-    //     if (err) console.log(err);
-    // })
+    fs.writeFile('./xp.json', JSON.stringify(xp), err => {
+        if (err) console.log(err);
+    })*/
 
     let prefixes = JSON.parse(fs.readFileSync("./prefixes.json", "utf8"));
-    if(!prefixes[message.guild]){
-        
-        prefixes[message.guild] = {
-            prefixes:config.prefix
-        }
+    if(!prefixes[message.guild]) {  
+      prefixes[message.guild] = {
+        prefixes:config.prefix
+      }
     }
 
 
@@ -119,9 +117,9 @@ bot.on("message", (message) => {
     let cmd = messageArray[0];
     let args = messageArray.slice(1);
 
-    if(!message.content.startsWith(prefix)) return;
+    if (!message.content.startsWith(prefix)) return;
     let commandfile = bot.commands.get(cmd.slice(prefix.length));
-    if(commandfile) commandfile.run(bot, message, args);
+    if (commandfile) commandfile.run(bot, message, args);
     
  
 })
