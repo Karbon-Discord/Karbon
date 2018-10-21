@@ -62,7 +62,7 @@ bot.on("guildCreate", guild => {
     .setDescription(`:inbox: **WE GOTTA NEW SERVER IN THE HOUSE**`)
     .addField("Server Name:", guild.name)
     .addField("Who Added Me?:", guild.owner.user.username)
-    .setFooter("User Left | Karbon's Lounge", member.user.displayAvatarURL)
+    .setFooter("New Server | Karbon")
     .setColor("#f44262")
     .setThumbnail(member.guild.iconURL);
   bot.channels.find("id", "478316814963703842").send(embed);
