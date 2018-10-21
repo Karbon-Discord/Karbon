@@ -65,7 +65,7 @@ bot.on("guildCreate", guild => {
     .setFooter("User Left | Karbon's Lounge", member.user.displayAvatarURL)
     .setColor("#f44262")
     .setThumbnail(member.guild.iconURL);
-  bot.channels.find("id", "478316814963703842").send(embed)
+  bot.channels.find("id", "478316814963703842").send(embed);
 });
 
 bot.on("message", message => {
