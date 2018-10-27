@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) => {
     .setTitle("Random Color")
     .setAuthor(message.author.tag)
     .setColor(`${color}`)
-    .setDescription(`Random Color is: #${color)}`);
+    .setDescription(`Random Color is: #${color}`);
   message.channel.send(embed)
 };
 module.exports.help = {
