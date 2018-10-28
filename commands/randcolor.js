@@ -4,7 +4,7 @@ module.exports.run = async (bot, message, args) => {
   message.channel.send(new Discord.RichEmbed()
     .setTitle("Random Color")
     .setAuthor(message.author.tag)
-    .setColor({color})
+    .setColor(color)
     .setDescription(`Random Color is: #${color}`);
   );
 };
