@@ -9,7 +9,7 @@ module.exports.run = async (bot, message, args) => {
   .setColor("#072b66")
   .setThumbnail(bicon)
   .addField("Name", bot.user.username)
-  .addField("Bot Image is All Rights Reserved from", "Lxi Inc.")
+  .addField("Bot Image", "Karbon bot image from Lxi Inc. All rights reserved.")
   .addField("Created", bot.user.createdAt)
   message.channel.send(botembed)
 

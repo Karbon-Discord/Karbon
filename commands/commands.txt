@@ -18,7 +18,7 @@ Warns the specified user with the specified reason. For convenience, the number 
 --delete <number_of_messages>
 Deletes the specified number of messages.
 --give <user> <katoms>
-Gives katoms to a specified user without affecting the giver's balance.
+Gives katoms to a specified user without affecting the giver's balance. This command can only be used by Karbon's administrators.
 
 **INFORMATION**
 --help

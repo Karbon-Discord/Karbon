@@ -14,7 +14,6 @@ module.exports.run = async (bot, message, args) => {
       "uh sure?",
       "ask a friend",
       "i cant answer right now"
-
   ]
 
   if (!question) {
