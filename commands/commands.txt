@@ -31,8 +31,8 @@ Translates the specified string with Yandex to the specified two-character langu
 Returns the Neocities (https://neocities.org/) website statistics of the specified Neocities site.
 --fortnite <fortnite_username> [pc|xbl|psn]
 Returns the Fortnite statistics of the specified username on the specified platform (PC, XBOX Live, or PlayStation).
---discordid
-Returns the Discord ID of the sender's account.
+--discordid <user>
+Returns the Discord ID of the specified user (optional, defaults to sender).
 --height [fti | itf] [number]
 
 

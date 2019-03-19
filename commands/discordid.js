@@ -1,12 +1,11 @@
 const Discord = require('discord.js');
 
 module.exports.run = async (bot, message, args) => {
+    message.react("🆔");
     if (args[0]) {
-      message.channel.send(args[0]);
-      message.channel.send(message.mentions.members.first().id);
+      message.channel.send(`Discord ID of that user: ${message.mentions.members.first().id}`);
     }
     else {
-      message.react("🆔");
       message.reply(`**Your Discord ID is: ${message.author.id}**`);
     }
 }
