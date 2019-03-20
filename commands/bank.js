@@ -18,16 +18,16 @@ const num = args[1];
 if(!num) return errors.correctUsage(message, botconfig.prefix + "bank withdraw [num. katoms]");
 else if(!bankacc[message.author.id]) return errors.noKatoms(message);
 else{
-  var lol = bankacc[message.author.id].katoms - parseInt(num);
+  var altKatoms = bankacc[message.author.id].katoms - parseInt(num);
   fs.writeFile('../katoms2.json', JSON.stringify(katoms), err => {
     if(err) console.log(err);
   })
   
-  var oof = katoms[message.author.id].katoms + parseInt(num);
+  var personalKatoms = katoms[message.author.id].katoms + parseInt(num);
     fs.writeFile('../katoms.json', JSON.stringify(katoms), err => {
     if(err) console.log(err);
   })
-  message.reply(`**Transfer Successful! You now have: ${oof} Katoms, and your alt bank account has ${lol} Katoms!**`)
+  message.reply(`**Transfer Successful! You now have: ${personalKatoms} Katoms, and your alt bank account has ${altKatoms} Katoms!**`)
 }
 }
 else if (args[0] == "deposit") {
@@ -51,11 +51,11 @@ else{
     if(err) console.log(err);
   })
   
-  var oof = bankacc[message.author.id].katoms + parseInt(num);
+  var altKatoms = bankacc[message.author.id].katoms + parseInt(num);
     fs.writeFile('../katoms2.json', JSON.stringify(katoms), err => {
     if(err) console.log(err);
   })
-  message.reply(`**Transfer Successful! You now have: ${katoms[message.author.id].katoms} Katoms, and your alt bank account has ${oof} Katoms!**`)
+  message.reply(`**Transfer Successful! You now have: ${katoms[message.author.id].katoms} Katoms, and your alt bank account has ${altKatoms} Katoms!**`)
 }
 }
 else {message.reply("Possible options: deposit, withdraw");}
