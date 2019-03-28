@@ -19,7 +19,7 @@ module.exports.run = async (bot, message, args) => {
   if (!question) {
       return errors.noQuestion(message);
   } else {
-      var rand = Math.floor(Math.random() * res.length);
+      let rand = Math.floor(Math.random() * res.length);
       message.channel.send(`${res[rand]}`);
   }
 }
