@@ -13,9 +13,9 @@ bot.commands = new Discord.Collection();
 fs.readdir("./commands", (err, files) => {
   let jsfile = files.filter(f => f.split(".").pop() === "js");
   if (jsfile.length <= 0) console.log("Couldn't find the command!");
-  jsfile.forEach((f, i) => {
-    let props = require(`./commands/${f}`);
-    console.log(`${f} loaded!`);
+  jsfile.forEach(file => {
+    let props = require(`./commands/${file}`);
+    console.log(`${file} loaded!`);
     bot.commands.set(props.help.name, props);
   });
 });
@@ -30,7 +30,7 @@ bot.on("ready", () => {
     }, 1800000);
   }
   else {
-    console.log("Discord Bot List token (dbltoken) was not found in .env! Server counts will not be sent to Discord Bot List.");
+    console.warn("Discord Bot List token (dbltoken) was not found in .env! Server counts will not be sent to Discord Bot List.");
   }
 });
 bot.on("guildMemberAdd", member => {
