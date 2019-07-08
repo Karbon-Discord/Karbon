@@ -1,5 +1,5 @@
 const Discord = require('discord.js');
-const model = require('https://github.com/Karbon-Discord/Karbon/blob/master/commands/tfmodels/temperaturemodel/model.json')
+const model = require('./tfmodels/temperaturemodel/model.json')
 const errors = require('./utils/errors.js')
 const tf = require('@tensorflow/tfjs')
 module.exports.run = async (bot, message, args) => {
