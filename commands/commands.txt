@@ -73,3 +73,5 @@ Stubs Karbon's toe.
 Gives a fact about the requested element of the periodic table.
 --category <word> [BETA]
 Uses Machine Learning to figure out which category the word belongs in: programming, object, subject, or animal.
+--temppred <min. temperature>
+Uses a TensorFlow Model @Imaginary Number#7739 made to predict the maximum temperature given the minimum temperature.
