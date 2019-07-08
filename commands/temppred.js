@@ -6,7 +6,7 @@ module.exports.run = async (bot, message, args) => {
     let minTemp = args[0]
     if(!minTemp) return errors.correctUsage(message, "--temppred [minimum temperature]");
     else{
-         const model = await tf.loadLayersModel("./tfmodels/temperaturemodel/model.json")
+         const model = await tf.loadLayersModel("https://github.com/Karbon-Discord/Karbon/blob/master/commands/tfmodels/temperaturemodel/model.json")
          let pred = model.predict(tf.tensor2d([parseInt(minTemp)], [1, 1]))
          message.channel.send(`The Predicted Maximum Temperature is: ${pred.dataSync()[0]}°F`)
     }
