@@ -7,7 +7,7 @@ module.exports.run = (bot, message, args) => {
     if(!minTemp) return errors.correctUsage(message, "--temppred [minimum temperature]");
     else{
          let pred = model.predict(tf.tensor2d([parseInt(minTemp)], [1, 1]))
-         message.channel.send(`The Predicted Maximum Temperature is: ${pred.dataSync()[0]}°F`).
+         message.channel.send(`The Predicted Maximum Temperature is: ${pred.dataSync()[0]}°F`)
     }
 }
 
